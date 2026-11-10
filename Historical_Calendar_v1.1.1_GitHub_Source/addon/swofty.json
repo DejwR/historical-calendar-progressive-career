@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "id": "dejw.swofty-historical-calendars-public",
+  "version": "1.1.1",
+  "name": "Historical Calendar for Progressive Career",
+  "author": "Dejw",
+  "category": "seasons",
+  "kind": [
+    "database",
+    "native",
+    "text"
+  ],
+  "description": "Season calendars for Swofty Progressive Career, from 2015 to 2026. Steam only. EA app is unsupported in this release. Optional track addons are off by default and use standard circuits as substitutes.",
+  "compat": {
+    "game": "f1_25",
+    "game_builds": [
+      "=25251167.0.0"
+    ],
+    "launcher": ">=1.8.36",
+    "seasons": [
+      "f1_2026"
+    ],
+    "platforms": [
+      "steam"
+    ]
+  },
+  "requires": [
+    {
+      "id": "swofty.swofty-seasons-progressive"
+    }
+  ],
+  "conflicts": [
+    {
+      "id": "dejw.calendar-2014-test"
+    },
+    {
+      "id": "dejw.calendar-2016-2017"
+    },
+    {
+      "id": "dejw.calendar-2014-finale-test"
+    },
+    {
+      "id": "dbedit.f1-2014-season-lenght"
+    },
+    {
+      "id": "dejw.swofty-historical-calendars"
+    }
+  ],
+  "options": [
+    {
+      "id": "use_paul_ricard",
+      "type": "toggle",
+      "label": "Use Paul Ricard",
+      "default": false,
+      "binds": "db",
+      "description": "Requires twilight.paul-ricard enabled in this profile. Standard substitute: Imola (2018, 2019), Shanghai (2021, 2022)."
+    },
+    {
+      "id": "use_portimao",
+      "type": "toggle",
+      "label": "Use Portimao",
+      "default": false,
+      "binds": "db",
+      "description": "Requires mod.portimao enabled in this profile. Standard substitute: Melbourne (2020, 2021)."
+    },
+    {
+      "id": "use_jerez",
+      "type": "toggle",
+      "label": "Use Jerez",
+      "default": false,
+      "binds": "db",
+      "description": "Requires pajko.jerez enabled in this profile. Standard substitute: Suzuka (2020)."
+    },
+    {
+      "id": "use_sochi",
+      "type": "toggle",
+      "label": "Use Sochi",
+      "default": false,
+      "binds": "db",
+      "description": "Requires mod.sochi enabled in this profile. Standard substitute: Jeddah (2015, 2016, 2017, 2018, 2019), Montreal (2020, 2021)."
+    },
+    {
+      "id": "use_nurburgring",
+      "type": "toggle",
+      "label": "Use Nurburgring",
+      "default": false,
+      "binds": "db",
+      "description": "Requires mod.nurburgring enabled in this profile. Standard substitute: Zandvoort (2020)."
+    },
+    {
+      "id": "use_istanbul_park",
+      "type": "toggle",
+      "label": "Use Istanbul Park",
+      "default": false,
+      "binds": "db",
+      "description": "Requires track.istanbul_park enabled in this profile. Standard substitute: Singapore (2020, 2021)."
+    },
+    {
+      "id": "use_bahrain_outer",
+      "type": "toggle",
+      "label": "Use Bahrain Outer",
+      "default": false,
+      "binds": "db",
+      "description": "Requires track.bahrain_outer enabled in this profile. Standard substitute: Bahrain GP (2020)."
+    },
+    {
+      "id": "use_hockenheim",
+      "type": "toggle",
+      "label": "Use Hockenheim",
+      "default": false,
+      "binds": "db",
+      "description": "Requires mod.hockenheim enabled in this profile. Standard substitute: Zandvoort (2016, 2018, 2019)."
+    },
+    {
+      "id": "use_sepang",
+      "type": "toggle",
+      "label": "Use Sepang",
+      "default": false,
+      "binds": "db",
+      "description": "Requires mod.bahrain24 enabled in this profile. Standard substitute: Losail (2015, 2016, 2017)."
+    }
+  ],
+  "operations": {
+    "database": [
+      "db/calendar.json"
+    ],
+    "assets": [
+      "lang/calendar.json"
+    ],
+    "native": [
+      {
+        "dll": "native/dejw_public_calendar.dll"
+      }
+    ]
+  },
+  "icon": "icon.png",
+  "launcher": {
+    "program": {
+      "windows": "bin/optional-tracks.exe"
+    },
+    "build": true
+  }
+}

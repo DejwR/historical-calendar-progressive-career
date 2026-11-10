@@ -1,0 +1,3885 @@
+{
+  "schema_version": 1,
+  "fields": {
+    "schedule.track_lists.track_event_list": [
+      "_metadata_",
+      "_fixed_event_reference_instancecount_",
+      "fixed_event_reference_0._metadata_",
+      "fixed_event_reference_0.event_name",
+      "fixed_event_reference_1._metadata_",
+      "fixed_event_reference_1.event_name",
+      "fixed_event_reference_2._metadata_",
+      "fixed_event_reference_2.event_name",
+      "fixed_event_reference_3._metadata_",
+      "fixed_event_reference_3.event_name",
+      "fixed_event_reference_4._metadata_",
+      "fixed_event_reference_4.event_name",
+      "fixed_event_reference_5._metadata_",
+      "fixed_event_reference_5.event_name",
+      "fixed_event_reference_6._metadata_",
+      "fixed_event_reference_6.event_name",
+      "fixed_event_reference_7._metadata_",
+      "fixed_event_reference_7.event_name",
+      "fixed_event_reference_8._metadata_",
+      "fixed_event_reference_8.event_name",
+      "fixed_event_reference_9._metadata_",
+      "fixed_event_reference_9.event_name",
+      "fixed_event_reference_10._metadata_",
+      "fixed_event_reference_10.event_name",
+      "fixed_event_reference_11._metadata_",
+      "fixed_event_reference_11.event_name",
+      "fixed_event_reference_12._metadata_",
+      "fixed_event_reference_12.event_name",
+      "fixed_event_reference_13._metadata_",
+      "fixed_event_reference_13.event_name",
+      "fixed_event_reference_14._metadata_",
+      "fixed_event_reference_14.event_name",
+      "fixed_event_reference_15._metadata_",
+      "fixed_event_reference_15.event_name",
+      "fixed_event_reference_16._metadata_",
+      "fixed_event_reference_16.event_name",
+      "fixed_event_reference_17._metadata_",
+      "fixed_event_reference_17.event_name",
+      "fixed_event_reference_18._metadata_",
+      "fixed_event_reference_18.event_name",
+      "fixed_event_reference_19._metadata_",
+      "fixed_event_reference_19.event_name",
+      "fixed_event_reference_20._metadata_",
+      "fixed_event_reference_20.event_name",
+      "fixed_event_reference_21._metadata_",
+      "fixed_event_reference_21.event_name",
+      "fixed_event_reference_22._metadata_",
+      "fixed_event_reference_22.event_name",
+      "fixed_event_reference_23._metadata_",
+      "fixed_event_reference_23.event_name"
+    ],
+    "schedule.activities.activity_race_weekend": [
+      "_metadata_",
+      "stat_id",
+      "activity_tracks",
+      "additional_buttons",
+      "career_applications",
+      "duration",
+      "in_progress_rewards",
+      "language_string",
+      "main_button",
+      "notification_priority",
+      "outcome",
+      "rewards",
+      "track",
+      "type"
+    ],
+    "schedule.all_track_events.fixed_event": [
+      "_metadata_",
+      "activity",
+      "stat_id",
+      "state",
+      "date_time.year",
+      "date_time.month",
+      "date_time.day",
+      "date_time.hour",
+      "date_time.minute",
+      "date_time.second",
+      "date_time.daylight_saving"
+    ]
+  },
+  "ops": [
+    {
+      "op": "add-row",
+      "table": "schedule.track_lists",
+      "from": "schedule.track_lists.track_event_list[_metadata_=F1_2026_full]",
+      "set": {
+        "_metadata_": "dejw_swofty_calendar_2022",
+        "_fixed_event_reference_instancecount_": "22",
+        "fixed_event_reference_0.event_name": "rw_bahrain",
+        "fixed_event_reference_1.event_name": "rw_jeddah",
+        "fixed_event_reference_2.event_name": "rw_melbourne",
+        "fixed_event_reference_3.event_name": "rw_imola",
+        "fixed_event_reference_4.event_name": "rw_miami",
+        "fixed_event_reference_5.event_name": "rw_catalunya",
+        "fixed_event_reference_6.event_name": "rw_monaco",
+        "fixed_event_reference_7.event_name": "rw_baku",
+        "fixed_event_reference_8.event_name": "rw_montreal",
+        "fixed_event_reference_9.event_name": "rw_silverstone",
+        "fixed_event_reference_10.event_name": "rw_austria",
+        "fixed_event_reference_11.event_name": "rw_paul_ricard",
+        "fixed_event_reference_12.event_name": "rw_hungaroring",
+        "fixed_event_reference_13.event_name": "rw_spa_francorchamps",
+        "fixed_event_reference_14.event_name": "rw_zandvoort",
+        "fixed_event_reference_15.event_name": "rw_monza",
+        "fixed_event_reference_16.event_name": "rw_singapore",
+        "fixed_event_reference_17.event_name": "rw_suzuka",
+        "fixed_event_reference_18.event_name": "rw_texas",
+        "fixed_event_reference_19.event_name": "rw_mexico",
+        "fixed_event_reference_20.event_name": "rw_brazil",
+        "fixed_event_reference_21.event_name": "rw_abu_dhabi"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.track_lists",
+      "from": "schedule.track_lists.track_event_list[_metadata_=F1_2026_full]",
+      "set": {
+        "_metadata_": "dejw_swofty_calendar_2024",
+        "_fixed_event_reference_instancecount_": "24",
+        "fixed_event_reference_0.event_name": "rw_bahrain",
+        "fixed_event_reference_1.event_name": "rw_jeddah",
+        "fixed_event_reference_2.event_name": "rw_melbourne",
+        "fixed_event_reference_3.event_name": "rw_austria_reverse_26",
+        "fixed_event_reference_4.event_name": "rw_shanghai",
+        "fixed_event_reference_5.event_name": "rw_miami",
+        "fixed_event_reference_6.event_name": "rw_silverstone_reverse_26",
+        "fixed_event_reference_7.event_name": "rw_monaco",
+        "fixed_event_reference_8.event_name": "rw_montreal",
+        "fixed_event_reference_9.event_name": "rw_zandvoort_reverse_26",
+        "fixed_event_reference_10.event_name": "rw_austria_reverse",
+        "fixed_event_reference_11.event_name": "rw_silverstone_reverse",
+        "fixed_event_reference_12.event_name": "rw_hungaroring",
+        "fixed_event_reference_13.event_name": "rw_spa_francorchamps",
+        "fixed_event_reference_14.event_name": "rw_zandvoort",
+        "fixed_event_reference_15.event_name": "rw_monza",
+        "fixed_event_reference_16.event_name": "rw_baku_26",
+        "fixed_event_reference_17.event_name": "rw_singapore",
+        "fixed_event_reference_18.event_name": "rw_texas",
+        "fixed_event_reference_19.event_name": "rw_mexico",
+        "fixed_event_reference_20.event_name": "rw_portimao",
+        "fixed_event_reference_21.event_name": "rw_las_vegas_26",
+        "fixed_event_reference_22.event_name": "rw_losail_26",
+        "fixed_event_reference_23.event_name": "rw_abu_dhabi_26"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_bahrain]",
+      "field": "date_time.year",
+      "value": "2026",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_bahrain]",
+      "field": "date_time.month",
+      "value": "March",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_bahrain]",
+      "field": "date_time.day",
+      "value": "19",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_jeddah]",
+      "field": "date_time.year",
+      "value": "2026",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_jeddah]",
+      "field": "date_time.month",
+      "value": "March",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_jeddah]",
+      "field": "date_time.day",
+      "value": "26",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne]",
+      "field": "date_time.year",
+      "value": "2026",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne]",
+      "field": "date_time.month",
+      "value": "April",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne]",
+      "field": "date_time.day",
+      "value": "9",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_imola]",
+      "field": "date_time.year",
+      "value": "2026",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_imola]",
+      "field": "date_time.month",
+      "value": "April",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_imola]",
+      "field": "date_time.day",
+      "value": "23",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_miami]",
+      "field": "date_time.year",
+      "value": "2026",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_miami]",
+      "field": "date_time.month",
+      "value": "May",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_miami]",
+      "field": "date_time.day",
+      "value": "7",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_catalunya]",
+      "field": "date_time.year",
+      "value": "2026",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_catalunya]",
+      "field": "date_time.month",
+      "value": "May",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_catalunya]",
+      "field": "date_time.day",
+      "value": "21",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_monaco]",
+      "field": "date_time.year",
+      "value": "2026",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_monaco]",
+      "field": "date_time.month",
+      "value": "May",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_monaco]",
+      "field": "date_time.day",
+      "value": "28",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_baku]",
+      "field": "date_time.year",
+      "value": "2026",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_baku]",
+      "field": "date_time.month",
+      "value": "June",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_baku]",
+      "field": "date_time.day",
+      "value": "11",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_montreal]",
+      "field": "date_time.year",
+      "value": "2026",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_montreal]",
+      "field": "date_time.month",
+      "value": "June",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_montreal]",
+      "field": "date_time.day",
+      "value": "18",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_silverstone]",
+      "field": "date_time.year",
+      "value": "2026",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_silverstone]",
+      "field": "date_time.month",
+      "value": "July",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_silverstone]",
+      "field": "date_time.day",
+      "value": "2",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_austria]",
+      "field": "date_time.year",
+      "value": "2026",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_austria]",
+      "field": "date_time.month",
+      "value": "July",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_austria]",
+      "field": "date_time.day",
+      "value": "9",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_paul_ricard]",
+      "field": "date_time.year",
+      "value": "2026",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_paul_ricard]",
+      "field": "date_time.month",
+      "value": "July",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_paul_ricard]",
+      "field": "date_time.day",
+      "value": "23",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_hungaroring]",
+      "field": "date_time.year",
+      "value": "2026",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_hungaroring]",
+      "field": "date_time.month",
+      "value": "July",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_hungaroring]",
+      "field": "date_time.day",
+      "value": "30",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_spa_francorchamps]",
+      "field": "date_time.year",
+      "value": "2026",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_spa_francorchamps]",
+      "field": "date_time.month",
+      "value": "August",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_spa_francorchamps]",
+      "field": "date_time.day",
+      "value": "27",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_zandvoort]",
+      "field": "date_time.year",
+      "value": "2026",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_zandvoort]",
+      "field": "date_time.month",
+      "value": "September",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_zandvoort]",
+      "field": "date_time.day",
+      "value": "3",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_monza]",
+      "field": "date_time.year",
+      "value": "2026",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_monza]",
+      "field": "date_time.month",
+      "value": "September",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_monza]",
+      "field": "date_time.day",
+      "value": "10",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_singapore]",
+      "field": "date_time.year",
+      "value": "2026",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_singapore]",
+      "field": "date_time.month",
+      "value": "October",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_singapore]",
+      "field": "date_time.day",
+      "value": "1",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_suzuka]",
+      "field": "date_time.year",
+      "value": "2026",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_suzuka]",
+      "field": "date_time.month",
+      "value": "October",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_suzuka]",
+      "field": "date_time.day",
+      "value": "8",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_texas]",
+      "field": "date_time.year",
+      "value": "2026",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_texas]",
+      "field": "date_time.month",
+      "value": "October",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_texas]",
+      "field": "date_time.day",
+      "value": "22",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_mexico]",
+      "field": "date_time.year",
+      "value": "2026",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_mexico]",
+      "field": "date_time.month",
+      "value": "October",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_mexico]",
+      "field": "date_time.day",
+      "value": "29",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_brazil]",
+      "field": "date_time.year",
+      "value": "2026",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_brazil]",
+      "field": "date_time.month",
+      "value": "November",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_brazil]",
+      "field": "date_time.day",
+      "value": "12",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_abu_dhabi]",
+      "field": "date_time.year",
+      "value": "2026",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_abu_dhabi]",
+      "field": "date_time.month",
+      "value": "November",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_abu_dhabi]",
+      "field": "date_time.day",
+      "value": "19",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_madrid]",
+      "field": "activity",
+      "value": "baku",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_madrid]",
+      "field": "date_time.year",
+      "value": "2026",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_madrid]",
+      "field": "date_time.month",
+      "value": "April",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_madrid]",
+      "field": "date_time.day",
+      "value": "30",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_zandvoort_reverse]",
+      "field": "activity",
+      "value": "catalunya",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_zandvoort_reverse]",
+      "field": "date_time.year",
+      "value": "2026",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_zandvoort_reverse]",
+      "field": "date_time.month",
+      "value": "June",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_zandvoort_reverse]",
+      "field": "date_time.day",
+      "value": "4",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_austria_reverse]",
+      "field": "activity",
+      "value": "austria",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_austria_reverse]",
+      "field": "date_time.year",
+      "value": "2026",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_austria_reverse]",
+      "field": "date_time.month",
+      "value": "July",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_austria_reverse]",
+      "field": "date_time.day",
+      "value": "2",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_silverstone_reverse]",
+      "field": "activity",
+      "value": "silverstone",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_silverstone_reverse]",
+      "field": "date_time.year",
+      "value": "2026",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_silverstone_reverse]",
+      "field": "date_time.month",
+      "value": "July",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_silverstone_reverse]",
+      "field": "date_time.day",
+      "value": "9",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_losail]",
+      "field": "date_time.year",
+      "value": "2026",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_losail]",
+      "field": "date_time.month",
+      "value": "October",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_losail]",
+      "field": "date_time.day",
+      "value": "15",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_portimao]",
+      "field": "activity",
+      "value": "brazil",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_portimao]",
+      "field": "date_time.year",
+      "value": "2026",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_portimao]",
+      "field": "date_time.month",
+      "value": "November",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_portimao]",
+      "field": "date_time.day",
+      "value": "5",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_las_vegas]",
+      "field": "date_time.year",
+      "value": "2026",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_las_vegas]",
+      "field": "date_time.month",
+      "value": "November",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_las_vegas]",
+      "field": "date_time.day",
+      "value": "12",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_styria]",
+      "field": "activity",
+      "value": "abu_dhabi",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_styria]",
+      "field": "date_time.year",
+      "value": "2026",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_styria]",
+      "field": "date_time.month",
+      "value": "November",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_styria]",
+      "field": "date_time.day",
+      "value": "26",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_austria_reverse_26]",
+      "field": "activity",
+      "value": "suzuka",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_austria_reverse_26]",
+      "field": "date_time.year",
+      "value": "2026",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_austria_reverse_26]",
+      "field": "date_time.month",
+      "value": "April",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_austria_reverse_26]",
+      "field": "date_time.day",
+      "value": "16",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_shanghai]",
+      "field": "date_time.year",
+      "value": "2026",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_shanghai]",
+      "field": "date_time.month",
+      "value": "April",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_shanghai]",
+      "field": "date_time.day",
+      "value": "23",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_silverstone_reverse_26]",
+      "field": "activity",
+      "value": "imola",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_silverstone_reverse_26]",
+      "field": "date_time.year",
+      "value": "2026",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_silverstone_reverse_26]",
+      "field": "date_time.month",
+      "value": "May",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_silverstone_reverse_26]",
+      "field": "date_time.day",
+      "value": "14",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_zandvoort_reverse_26]",
+      "field": "activity",
+      "value": "catalunya",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_zandvoort_reverse_26]",
+      "field": "date_time.year",
+      "value": "2026",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_zandvoort_reverse_26]",
+      "field": "date_time.month",
+      "value": "June",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_zandvoort_reverse_26]",
+      "field": "date_time.day",
+      "value": "25",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.track_lists.track_event_list[_metadata_=F1_2026_full_plus].fixed_event_reference_0",
+      "field": "event_name",
+      "value": "rw_bahrain",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.track_lists.track_event_list[_metadata_=F1_2026_full_plus].fixed_event_reference_1",
+      "field": "event_name",
+      "value": "rw_jeddah",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.track_lists.track_event_list[_metadata_=F1_2026_full_plus].fixed_event_reference_2",
+      "field": "event_name",
+      "value": "rw_melbourne",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.track_lists.track_event_list[_metadata_=F1_2026_full_plus].fixed_event_reference_3",
+      "field": "event_name",
+      "value": "rw_madrid",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.track_lists.track_event_list[_metadata_=F1_2026_full_plus].fixed_event_reference_4",
+      "field": "event_name",
+      "value": "rw_miami",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.track_lists.track_event_list[_metadata_=F1_2026_full_plus].fixed_event_reference_5",
+      "field": "event_name",
+      "value": "rw_monaco",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.track_lists.track_event_list[_metadata_=F1_2026_full_plus].fixed_event_reference_6",
+      "field": "event_name",
+      "value": "rw_zandvoort_reverse",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.track_lists.track_event_list[_metadata_=F1_2026_full_plus].fixed_event_reference_7",
+      "field": "event_name",
+      "value": "rw_montreal",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.track_lists.track_event_list[_metadata_=F1_2026_full_plus].fixed_event_reference_8",
+      "field": "event_name",
+      "value": "rw_austria_reverse",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.track_lists.track_event_list[_metadata_=F1_2026_full_plus].fixed_event_reference_9",
+      "field": "event_name",
+      "value": "rw_silverstone_reverse",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.track_lists.track_event_list[_metadata_=F1_2026_full_plus].fixed_event_reference_10",
+      "field": "event_name",
+      "value": "rw_hungaroring",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.track_lists.track_event_list[_metadata_=F1_2026_full_plus].fixed_event_reference_11",
+      "field": "event_name",
+      "value": "rw_spa_francorchamps",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.track_lists.track_event_list[_metadata_=F1_2026_full_plus].fixed_event_reference_12",
+      "field": "event_name",
+      "value": "rw_zandvoort",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.track_lists.track_event_list[_metadata_=F1_2026_full_plus].fixed_event_reference_13",
+      "field": "event_name",
+      "value": "rw_monza",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.track_lists.track_event_list[_metadata_=F1_2026_full_plus].fixed_event_reference_14",
+      "field": "event_name",
+      "value": "rw_singapore",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.track_lists.track_event_list[_metadata_=F1_2026_full_plus].fixed_event_reference_15",
+      "field": "event_name",
+      "value": "rw_suzuka",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.track_lists.track_event_list[_metadata_=F1_2026_full_plus].fixed_event_reference_16",
+      "field": "event_name",
+      "value": "rw_losail",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.track_lists.track_event_list[_metadata_=F1_2026_full_plus].fixed_event_reference_17",
+      "field": "event_name",
+      "value": "rw_texas",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.track_lists.track_event_list[_metadata_=F1_2026_full_plus].fixed_event_reference_18",
+      "field": "event_name",
+      "value": "rw_mexico",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.track_lists.track_event_list[_metadata_=F1_2026_full_plus].fixed_event_reference_19",
+      "field": "event_name",
+      "value": "rw_portimao",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.track_lists.track_event_list[_metadata_=F1_2026_full_plus].fixed_event_reference_20",
+      "field": "event_name",
+      "value": "rw_las_vegas",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.track_lists.track_event_list[_metadata_=F1_2026_full_plus].fixed_event_reference_21",
+      "field": "event_name",
+      "value": "rw_styria",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.track_lists.track_event_list[_metadata_=F1_2026_full_plus]",
+      "field": "_fixed_event_reference_instancecount_",
+      "value": "22",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.dynamic_event_data.default_ui_track_list_data.custom_dynamic_available_track_list_data[_metadata_=F1_2026_Medium]",
+      "field": "track_list_name",
+      "value": "F1_2026_full_plus",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.dynamic_event_data.default_ui_track_list_data.custom_dynamic_available_track_list_data[_metadata_=F1_2026_Medium]",
+      "field": "max_num_tracks",
+      "value": "22",
+      "create": false
+    },
+    {
+      "op": "set",
+      "select": "schedule.dynamic_event_data.default_ui_track_list_data.custom_dynamic_available_track_list_data[_metadata_=F1_2026_Medium]",
+      "field": "language_string",
+      "value": "lng_dejw_swofty_historical_calendar",
+      "create": false
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2020_01",
+        "activity": "austria",
+        "stat_id": "160",
+        "date_time.year": "2026",
+        "date_time.month": "July",
+        "date_time.day": "2"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2020_02",
+        "activity": "austria",
+        "stat_id": "161",
+        "date_time.year": "2026",
+        "date_time.month": "July",
+        "date_time.day": "9"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2020_03",
+        "activity": "hungaroring",
+        "stat_id": "162",
+        "date_time.year": "2026",
+        "date_time.month": "July",
+        "date_time.day": "16"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2020_04",
+        "activity": "silverstone",
+        "stat_id": "163",
+        "date_time.year": "2026",
+        "date_time.month": "July",
+        "date_time.day": "30"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2020_05",
+        "activity": "silverstone",
+        "stat_id": "164",
+        "date_time.year": "2026",
+        "date_time.month": "August",
+        "date_time.day": "6"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2020_06",
+        "activity": "catalunya",
+        "stat_id": "165",
+        "date_time.year": "2026",
+        "date_time.month": "August",
+        "date_time.day": "13"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2020_07",
+        "activity": "spa_francorchamps",
+        "stat_id": "166",
+        "date_time.year": "2026",
+        "date_time.month": "August",
+        "date_time.day": "27"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2020_08",
+        "activity": "monza",
+        "stat_id": "167",
+        "date_time.year": "2026",
+        "date_time.month": "September",
+        "date_time.day": "3"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2020_09",
+        "activity": "suzuka",
+        "stat_id": "168",
+        "date_time.year": "2026",
+        "date_time.month": "September",
+        "date_time.day": "10"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2020_10",
+        "activity": "montreal",
+        "stat_id": "169",
+        "date_time.year": "2026",
+        "date_time.month": "September",
+        "date_time.day": "24"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2020_11",
+        "activity": "zandvoort",
+        "stat_id": "170",
+        "date_time.year": "2026",
+        "date_time.month": "October",
+        "date_time.day": "8"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2020_12",
+        "activity": "melbourne",
+        "stat_id": "171",
+        "date_time.year": "2026",
+        "date_time.month": "October",
+        "date_time.day": "22"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2020_13",
+        "activity": "imola",
+        "stat_id": "172",
+        "date_time.year": "2026",
+        "date_time.month": "October",
+        "date_time.day": "29"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2020_14",
+        "activity": "singapore",
+        "stat_id": "173",
+        "date_time.year": "2026",
+        "date_time.month": "November",
+        "date_time.day": "12"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2020_15",
+        "activity": "bahrain",
+        "stat_id": "174",
+        "date_time.year": "2026",
+        "date_time.month": "November",
+        "date_time.day": "26"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2020_16",
+        "activity": "bahrain",
+        "stat_id": "175",
+        "date_time.year": "2026",
+        "date_time.month": "December",
+        "date_time.day": "3"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2020_17",
+        "activity": "abu_dhabi",
+        "stat_id": "176",
+        "date_time.year": "2026",
+        "date_time.month": "December",
+        "date_time.day": "10"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.track_lists",
+      "from": "schedule.track_lists.track_event_list[_metadata_=F1_2026_full]",
+      "set": {
+        "_metadata_": "dejw_swofty_calendar_2020",
+        "_fixed_event_reference_instancecount_": "17",
+        "fixed_event_reference_0.event_name": "dejw_calendar_2020_01",
+        "fixed_event_reference_1.event_name": "dejw_calendar_2020_02",
+        "fixed_event_reference_2.event_name": "dejw_calendar_2020_03",
+        "fixed_event_reference_3.event_name": "dejw_calendar_2020_04",
+        "fixed_event_reference_4.event_name": "dejw_calendar_2020_05",
+        "fixed_event_reference_5.event_name": "dejw_calendar_2020_06",
+        "fixed_event_reference_6.event_name": "dejw_calendar_2020_07",
+        "fixed_event_reference_7.event_name": "dejw_calendar_2020_08",
+        "fixed_event_reference_8.event_name": "dejw_calendar_2020_09",
+        "fixed_event_reference_9.event_name": "dejw_calendar_2020_10",
+        "fixed_event_reference_10.event_name": "dejw_calendar_2020_11",
+        "fixed_event_reference_11.event_name": "dejw_calendar_2020_12",
+        "fixed_event_reference_12.event_name": "dejw_calendar_2020_13",
+        "fixed_event_reference_13.event_name": "dejw_calendar_2020_14",
+        "fixed_event_reference_14.event_name": "dejw_calendar_2020_15",
+        "fixed_event_reference_15.event_name": "dejw_calendar_2020_16",
+        "fixed_event_reference_16.event_name": "dejw_calendar_2020_17"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2021_01",
+        "activity": "bahrain",
+        "stat_id": "177",
+        "date_time.year": "2026",
+        "date_time.month": "March",
+        "date_time.day": "26"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2021_02",
+        "activity": "imola",
+        "stat_id": "178",
+        "date_time.year": "2026",
+        "date_time.month": "April",
+        "date_time.day": "16"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2021_03",
+        "activity": "melbourne",
+        "stat_id": "179",
+        "date_time.year": "2026",
+        "date_time.month": "April",
+        "date_time.day": "30"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2021_04",
+        "activity": "catalunya",
+        "stat_id": "180",
+        "date_time.year": "2026",
+        "date_time.month": "May",
+        "date_time.day": "7"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2021_05",
+        "activity": "monaco",
+        "stat_id": "181",
+        "date_time.year": "2026",
+        "date_time.month": "May",
+        "date_time.day": "21"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2021_06",
+        "activity": "baku",
+        "stat_id": "182",
+        "date_time.year": "2026",
+        "date_time.month": "June",
+        "date_time.day": "4"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2021_07",
+        "activity": "shanghai",
+        "stat_id": "183",
+        "date_time.year": "2026",
+        "date_time.month": "June",
+        "date_time.day": "18"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2021_08",
+        "activity": "austria",
+        "stat_id": "184",
+        "date_time.year": "2026",
+        "date_time.month": "June",
+        "date_time.day": "25"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2021_09",
+        "activity": "austria",
+        "stat_id": "185",
+        "date_time.year": "2026",
+        "date_time.month": "July",
+        "date_time.day": "2"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2021_10",
+        "activity": "silverstone",
+        "stat_id": "186",
+        "date_time.year": "2026",
+        "date_time.month": "July",
+        "date_time.day": "16"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2021_11",
+        "activity": "hungaroring",
+        "stat_id": "187",
+        "date_time.year": "2026",
+        "date_time.month": "July",
+        "date_time.day": "30"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2021_12",
+        "activity": "spa_francorchamps",
+        "stat_id": "188",
+        "date_time.year": "2026",
+        "date_time.month": "August",
+        "date_time.day": "27"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2021_13",
+        "activity": "zandvoort",
+        "stat_id": "189",
+        "date_time.year": "2026",
+        "date_time.month": "September",
+        "date_time.day": "3"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2021_14",
+        "activity": "monza",
+        "stat_id": "190",
+        "date_time.year": "2026",
+        "date_time.month": "September",
+        "date_time.day": "10"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2021_15",
+        "activity": "montreal",
+        "stat_id": "191",
+        "date_time.year": "2026",
+        "date_time.month": "September",
+        "date_time.day": "24"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2021_16",
+        "activity": "singapore",
+        "stat_id": "192",
+        "date_time.year": "2026",
+        "date_time.month": "October",
+        "date_time.day": "8"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2021_17",
+        "activity": "texas",
+        "stat_id": "193",
+        "date_time.year": "2026",
+        "date_time.month": "October",
+        "date_time.day": "22"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2021_18",
+        "activity": "mexico",
+        "stat_id": "194",
+        "date_time.year": "2026",
+        "date_time.month": "November",
+        "date_time.day": "5"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2021_19",
+        "activity": "brazil",
+        "stat_id": "195",
+        "date_time.year": "2026",
+        "date_time.month": "November",
+        "date_time.day": "12"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2021_20",
+        "activity": "losail",
+        "stat_id": "196",
+        "date_time.year": "2026",
+        "date_time.month": "November",
+        "date_time.day": "19"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2021_21",
+        "activity": "jeddah",
+        "stat_id": "197",
+        "date_time.year": "2026",
+        "date_time.month": "December",
+        "date_time.day": "3"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2021_22",
+        "activity": "abu_dhabi",
+        "stat_id": "198",
+        "date_time.year": "2026",
+        "date_time.month": "December",
+        "date_time.day": "10"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.track_lists",
+      "from": "schedule.track_lists.track_event_list[_metadata_=F1_2026_full]",
+      "set": {
+        "_metadata_": "dejw_swofty_calendar_2021",
+        "_fixed_event_reference_instancecount_": "22",
+        "fixed_event_reference_0.event_name": "dejw_calendar_2021_01",
+        "fixed_event_reference_1.event_name": "dejw_calendar_2021_02",
+        "fixed_event_reference_2.event_name": "dejw_calendar_2021_03",
+        "fixed_event_reference_3.event_name": "dejw_calendar_2021_04",
+        "fixed_event_reference_4.event_name": "dejw_calendar_2021_05",
+        "fixed_event_reference_5.event_name": "dejw_calendar_2021_06",
+        "fixed_event_reference_6.event_name": "dejw_calendar_2021_07",
+        "fixed_event_reference_7.event_name": "dejw_calendar_2021_08",
+        "fixed_event_reference_8.event_name": "dejw_calendar_2021_09",
+        "fixed_event_reference_9.event_name": "dejw_calendar_2021_10",
+        "fixed_event_reference_10.event_name": "dejw_calendar_2021_11",
+        "fixed_event_reference_11.event_name": "dejw_calendar_2021_12",
+        "fixed_event_reference_12.event_name": "dejw_calendar_2021_13",
+        "fixed_event_reference_13.event_name": "dejw_calendar_2021_14",
+        "fixed_event_reference_14.event_name": "dejw_calendar_2021_15",
+        "fixed_event_reference_15.event_name": "dejw_calendar_2021_16",
+        "fixed_event_reference_16.event_name": "dejw_calendar_2021_17",
+        "fixed_event_reference_17.event_name": "dejw_calendar_2021_18",
+        "fixed_event_reference_18.event_name": "dejw_calendar_2021_19",
+        "fixed_event_reference_19.event_name": "dejw_calendar_2021_20",
+        "fixed_event_reference_20.event_name": "dejw_calendar_2021_21",
+        "fixed_event_reference_21.event_name": "dejw_calendar_2021_22"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2025_01",
+        "activity": "melbourne",
+        "stat_id": "199",
+        "date_time.year": "2026",
+        "date_time.month": "March",
+        "date_time.day": "12"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2025_02",
+        "activity": "shanghai",
+        "stat_id": "200",
+        "date_time.year": "2026",
+        "date_time.month": "March",
+        "date_time.day": "19"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2025_03",
+        "activity": "suzuka",
+        "stat_id": "201",
+        "date_time.year": "2026",
+        "date_time.month": "April",
+        "date_time.day": "2"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2025_04",
+        "activity": "bahrain",
+        "stat_id": "202",
+        "date_time.year": "2026",
+        "date_time.month": "April",
+        "date_time.day": "9"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2025_05",
+        "activity": "jeddah",
+        "stat_id": "203",
+        "date_time.year": "2026",
+        "date_time.month": "April",
+        "date_time.day": "16"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2025_06",
+        "activity": "miami",
+        "stat_id": "204",
+        "date_time.year": "2026",
+        "date_time.month": "April",
+        "date_time.day": "30"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2025_07",
+        "activity": "imola",
+        "stat_id": "205",
+        "date_time.year": "2026",
+        "date_time.month": "May",
+        "date_time.day": "14"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2025_08",
+        "activity": "monaco",
+        "stat_id": "206",
+        "date_time.year": "2026",
+        "date_time.month": "May",
+        "date_time.day": "21"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2025_09",
+        "activity": "catalunya",
+        "stat_id": "207",
+        "date_time.year": "2026",
+        "date_time.month": "May",
+        "date_time.day": "28"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2025_10",
+        "activity": "montreal",
+        "stat_id": "208",
+        "date_time.year": "2026",
+        "date_time.month": "June",
+        "date_time.day": "11"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2025_11",
+        "activity": "austria",
+        "stat_id": "209",
+        "date_time.year": "2026",
+        "date_time.month": "June",
+        "date_time.day": "25"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2025_12",
+        "activity": "silverstone",
+        "stat_id": "210",
+        "date_time.year": "2026",
+        "date_time.month": "July",
+        "date_time.day": "2"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2025_13",
+        "activity": "spa_francorchamps",
+        "stat_id": "211",
+        "date_time.year": "2026",
+        "date_time.month": "July",
+        "date_time.day": "23"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2025_14",
+        "activity": "hungaroring",
+        "stat_id": "212",
+        "date_time.year": "2026",
+        "date_time.month": "July",
+        "date_time.day": "30"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2025_15",
+        "activity": "zandvoort",
+        "stat_id": "213",
+        "date_time.year": "2026",
+        "date_time.month": "August",
+        "date_time.day": "27"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2025_16",
+        "activity": "monza",
+        "stat_id": "214",
+        "date_time.year": "2026",
+        "date_time.month": "September",
+        "date_time.day": "3"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2025_17",
+        "activity": "baku",
+        "stat_id": "215",
+        "date_time.year": "2026",
+        "date_time.month": "September",
+        "date_time.day": "17"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2025_18",
+        "activity": "singapore",
+        "stat_id": "216",
+        "date_time.year": "2026",
+        "date_time.month": "October",
+        "date_time.day": "1"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2025_19",
+        "activity": "texas",
+        "stat_id": "217",
+        "date_time.year": "2026",
+        "date_time.month": "October",
+        "date_time.day": "15"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2025_20",
+        "activity": "mexico",
+        "stat_id": "218",
+        "date_time.year": "2026",
+        "date_time.month": "October",
+        "date_time.day": "22"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2025_21",
+        "activity": "brazil",
+        "stat_id": "219",
+        "date_time.year": "2026",
+        "date_time.month": "November",
+        "date_time.day": "5"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2025_22",
+        "activity": "las_vegas",
+        "stat_id": "220",
+        "date_time.year": "2026",
+        "date_time.month": "November",
+        "date_time.day": "19"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2025_23",
+        "activity": "losail",
+        "stat_id": "221",
+        "date_time.year": "2026",
+        "date_time.month": "November",
+        "date_time.day": "26"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2025_24",
+        "activity": "abu_dhabi",
+        "stat_id": "222",
+        "date_time.year": "2026",
+        "date_time.month": "December",
+        "date_time.day": "3"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.track_lists",
+      "from": "schedule.track_lists.track_event_list[_metadata_=F1_2026_full]",
+      "set": {
+        "_metadata_": "dejw_swofty_calendar_2025",
+        "_fixed_event_reference_instancecount_": "24",
+        "fixed_event_reference_0.event_name": "dejw_calendar_2025_01",
+        "fixed_event_reference_1.event_name": "dejw_calendar_2025_02",
+        "fixed_event_reference_2.event_name": "dejw_calendar_2025_03",
+        "fixed_event_reference_3.event_name": "dejw_calendar_2025_04",
+        "fixed_event_reference_4.event_name": "dejw_calendar_2025_05",
+        "fixed_event_reference_5.event_name": "dejw_calendar_2025_06",
+        "fixed_event_reference_6.event_name": "dejw_calendar_2025_07",
+        "fixed_event_reference_7.event_name": "dejw_calendar_2025_08",
+        "fixed_event_reference_8.event_name": "dejw_calendar_2025_09",
+        "fixed_event_reference_9.event_name": "dejw_calendar_2025_10",
+        "fixed_event_reference_10.event_name": "dejw_calendar_2025_11",
+        "fixed_event_reference_11.event_name": "dejw_calendar_2025_12",
+        "fixed_event_reference_12.event_name": "dejw_calendar_2025_13",
+        "fixed_event_reference_13.event_name": "dejw_calendar_2025_14",
+        "fixed_event_reference_14.event_name": "dejw_calendar_2025_15",
+        "fixed_event_reference_15.event_name": "dejw_calendar_2025_16",
+        "fixed_event_reference_16.event_name": "dejw_calendar_2025_17",
+        "fixed_event_reference_17.event_name": "dejw_calendar_2025_18",
+        "fixed_event_reference_18.event_name": "dejw_calendar_2025_19",
+        "fixed_event_reference_19.event_name": "dejw_calendar_2025_20",
+        "fixed_event_reference_20.event_name": "dejw_calendar_2025_21",
+        "fixed_event_reference_21.event_name": "dejw_calendar_2025_22",
+        "fixed_event_reference_22.event_name": "dejw_calendar_2025_23",
+        "fixed_event_reference_23.event_name": "dejw_calendar_2025_24"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2019_01",
+        "activity": "melbourne",
+        "stat_id": "223",
+        "date_time.year": "2026",
+        "date_time.month": "March",
+        "date_time.day": "12"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2019_02",
+        "activity": "bahrain",
+        "stat_id": "224",
+        "date_time.year": "2026",
+        "date_time.month": "March",
+        "date_time.day": "26"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2019_03",
+        "activity": "shanghai",
+        "stat_id": "225",
+        "date_time.year": "2026",
+        "date_time.month": "April",
+        "date_time.day": "9"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2019_04",
+        "activity": "baku",
+        "stat_id": "226",
+        "date_time.year": "2026",
+        "date_time.month": "April",
+        "date_time.day": "23"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2019_05",
+        "activity": "catalunya",
+        "stat_id": "227",
+        "date_time.year": "2026",
+        "date_time.month": "May",
+        "date_time.day": "7"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2019_06",
+        "activity": "monaco",
+        "stat_id": "228",
+        "date_time.year": "2026",
+        "date_time.month": "May",
+        "date_time.day": "21"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2019_07",
+        "activity": "montreal",
+        "stat_id": "229",
+        "date_time.year": "2026",
+        "date_time.month": "June",
+        "date_time.day": "4"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2019_08",
+        "activity": "imola",
+        "stat_id": "230",
+        "date_time.year": "2026",
+        "date_time.month": "June",
+        "date_time.day": "18"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2019_09",
+        "activity": "austria",
+        "stat_id": "231",
+        "date_time.year": "2026",
+        "date_time.month": "June",
+        "date_time.day": "25"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2019_10",
+        "activity": "silverstone",
+        "stat_id": "232",
+        "date_time.year": "2026",
+        "date_time.month": "July",
+        "date_time.day": "9"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2019_11",
+        "activity": "zandvoort",
+        "stat_id": "233",
+        "date_time.year": "2026",
+        "date_time.month": "July",
+        "date_time.day": "23"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2019_12",
+        "activity": "hungaroring",
+        "stat_id": "234",
+        "date_time.year": "2026",
+        "date_time.month": "July",
+        "date_time.day": "30"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2019_13",
+        "activity": "spa_francorchamps",
+        "stat_id": "235",
+        "date_time.year": "2026",
+        "date_time.month": "August",
+        "date_time.day": "27"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2019_14",
+        "activity": "monza",
+        "stat_id": "236",
+        "date_time.year": "2026",
+        "date_time.month": "September",
+        "date_time.day": "3"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2019_15",
+        "activity": "singapore",
+        "stat_id": "237",
+        "date_time.year": "2026",
+        "date_time.month": "September",
+        "date_time.day": "17"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2019_16",
+        "activity": "jeddah",
+        "stat_id": "238",
+        "date_time.year": "2026",
+        "date_time.month": "September",
+        "date_time.day": "24"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2019_17",
+        "activity": "suzuka",
+        "stat_id": "239",
+        "date_time.year": "2026",
+        "date_time.month": "October",
+        "date_time.day": "8"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2019_18",
+        "activity": "mexico",
+        "stat_id": "240",
+        "date_time.year": "2026",
+        "date_time.month": "October",
+        "date_time.day": "22"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2019_19",
+        "activity": "texas",
+        "stat_id": "241",
+        "date_time.year": "2026",
+        "date_time.month": "October",
+        "date_time.day": "29"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2019_20",
+        "activity": "brazil",
+        "stat_id": "242",
+        "date_time.year": "2026",
+        "date_time.month": "November",
+        "date_time.day": "12"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2019_21",
+        "activity": "abu_dhabi",
+        "stat_id": "243",
+        "date_time.year": "2026",
+        "date_time.month": "November",
+        "date_time.day": "26"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.track_lists",
+      "from": "schedule.track_lists.track_event_list[_metadata_=F1_2026_full]",
+      "set": {
+        "_metadata_": "dejw_swofty_calendar_2019",
+        "_fixed_event_reference_instancecount_": "21",
+        "fixed_event_reference_0.event_name": "dejw_calendar_2019_01",
+        "fixed_event_reference_1.event_name": "dejw_calendar_2019_02",
+        "fixed_event_reference_2.event_name": "dejw_calendar_2019_03",
+        "fixed_event_reference_3.event_name": "dejw_calendar_2019_04",
+        "fixed_event_reference_4.event_name": "dejw_calendar_2019_05",
+        "fixed_event_reference_5.event_name": "dejw_calendar_2019_06",
+        "fixed_event_reference_6.event_name": "dejw_calendar_2019_07",
+        "fixed_event_reference_7.event_name": "dejw_calendar_2019_08",
+        "fixed_event_reference_8.event_name": "dejw_calendar_2019_09",
+        "fixed_event_reference_9.event_name": "dejw_calendar_2019_10",
+        "fixed_event_reference_10.event_name": "dejw_calendar_2019_11",
+        "fixed_event_reference_11.event_name": "dejw_calendar_2019_12",
+        "fixed_event_reference_12.event_name": "dejw_calendar_2019_13",
+        "fixed_event_reference_13.event_name": "dejw_calendar_2019_14",
+        "fixed_event_reference_14.event_name": "dejw_calendar_2019_15",
+        "fixed_event_reference_15.event_name": "dejw_calendar_2019_16",
+        "fixed_event_reference_16.event_name": "dejw_calendar_2019_17",
+        "fixed_event_reference_17.event_name": "dejw_calendar_2019_18",
+        "fixed_event_reference_18.event_name": "dejw_calendar_2019_19",
+        "fixed_event_reference_19.event_name": "dejw_calendar_2019_20",
+        "fixed_event_reference_20.event_name": "dejw_calendar_2019_21"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.track_lists",
+      "from": "schedule.track_lists.track_event_list[_metadata_=F1_2026_full]",
+      "set": {
+        "_metadata_": "dejw_swofty_calendar_2026",
+        "_fixed_event_reference_instancecount_": "24",
+        "fixed_event_reference_0.event_name": "rw_melbourne_26",
+        "fixed_event_reference_1.event_name": "rw_shanghai_26",
+        "fixed_event_reference_2.event_name": "rw_suzuka_26",
+        "fixed_event_reference_3.event_name": "rw_bahrain_26",
+        "fixed_event_reference_4.event_name": "rw_jeddah_26",
+        "fixed_event_reference_5.event_name": "rw_miami_26",
+        "fixed_event_reference_6.event_name": "rw_montreal_26",
+        "fixed_event_reference_7.event_name": "rw_monaco_26",
+        "fixed_event_reference_8.event_name": "rw_catalunya_26",
+        "fixed_event_reference_9.event_name": "rw_austria_26",
+        "fixed_event_reference_10.event_name": "rw_silverstone_26",
+        "fixed_event_reference_11.event_name": "rw_spa_francorchamps_26",
+        "fixed_event_reference_12.event_name": "rw_hungaroring_26",
+        "fixed_event_reference_13.event_name": "rw_zandvoort_26",
+        "fixed_event_reference_14.event_name": "rw_monza_26",
+        "fixed_event_reference_15.event_name": "rw_madrid_26",
+        "fixed_event_reference_16.event_name": "rw_baku_26",
+        "fixed_event_reference_17.event_name": "rw_singapore_26",
+        "fixed_event_reference_18.event_name": "rw_texas_26",
+        "fixed_event_reference_19.event_name": "rw_mexico_26",
+        "fixed_event_reference_20.event_name": "rw_brazil_26",
+        "fixed_event_reference_21.event_name": "rw_las_vegas_26",
+        "fixed_event_reference_22.event_name": "rw_losail_26",
+        "fixed_event_reference_23.event_name": "rw_abu_dhabi_26"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2016_01",
+        "activity": "melbourne",
+        "stat_id": "33",
+        "date_time.year": "2026",
+        "date_time.month": "March",
+        "date_time.day": "19"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2016_02",
+        "activity": "bahrain",
+        "stat_id": "34",
+        "date_time.year": "2026",
+        "date_time.month": "April",
+        "date_time.day": "2"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2016_03",
+        "activity": "shanghai",
+        "stat_id": "35",
+        "date_time.year": "2026",
+        "date_time.month": "April",
+        "date_time.day": "16"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2016_04",
+        "activity": "jeddah",
+        "stat_id": "36",
+        "date_time.year": "2026",
+        "date_time.month": "April",
+        "date_time.day": "30"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2016_05",
+        "activity": "catalunya",
+        "stat_id": "37",
+        "date_time.year": "2026",
+        "date_time.month": "May",
+        "date_time.day": "14"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2016_06",
+        "activity": "monaco",
+        "stat_id": "38",
+        "date_time.year": "2026",
+        "date_time.month": "May",
+        "date_time.day": "28"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2016_07",
+        "activity": "montreal",
+        "stat_id": "39",
+        "date_time.year": "2026",
+        "date_time.month": "June",
+        "date_time.day": "11"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2016_08",
+        "activity": "baku",
+        "stat_id": "40",
+        "date_time.year": "2026",
+        "date_time.month": "June",
+        "date_time.day": "18"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2016_09",
+        "activity": "austria",
+        "stat_id": "41",
+        "date_time.year": "2026",
+        "date_time.month": "July",
+        "date_time.day": "2"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2016_10",
+        "activity": "silverstone",
+        "stat_id": "42",
+        "date_time.year": "2026",
+        "date_time.month": "July",
+        "date_time.day": "9"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2016_11",
+        "activity": "hungaroring",
+        "stat_id": "43",
+        "date_time.year": "2026",
+        "date_time.month": "July",
+        "date_time.day": "23"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2016_12",
+        "activity": "zandvoort",
+        "stat_id": "44",
+        "date_time.year": "2026",
+        "date_time.month": "July",
+        "date_time.day": "30"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2016_13",
+        "activity": "spa_francorchamps",
+        "stat_id": "45",
+        "date_time.year": "2026",
+        "date_time.month": "August",
+        "date_time.day": "27"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2016_14",
+        "activity": "monza",
+        "stat_id": "46",
+        "date_time.year": "2026",
+        "date_time.month": "September",
+        "date_time.day": "3"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2016_15",
+        "activity": "singapore",
+        "stat_id": "47",
+        "date_time.year": "2026",
+        "date_time.month": "September",
+        "date_time.day": "17"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2016_16",
+        "activity": "losail",
+        "stat_id": "48",
+        "date_time.year": "2026",
+        "date_time.month": "October",
+        "date_time.day": "1"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2016_17",
+        "activity": "suzuka",
+        "stat_id": "49",
+        "date_time.year": "2026",
+        "date_time.month": "October",
+        "date_time.day": "8"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2016_18",
+        "activity": "texas",
+        "stat_id": "50",
+        "date_time.year": "2026",
+        "date_time.month": "October",
+        "date_time.day": "22"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2016_19",
+        "activity": "mexico",
+        "stat_id": "51",
+        "date_time.year": "2026",
+        "date_time.month": "October",
+        "date_time.day": "29"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2016_20",
+        "activity": "brazil",
+        "stat_id": "52",
+        "date_time.year": "2026",
+        "date_time.month": "November",
+        "date_time.day": "12"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2016_21",
+        "activity": "abu_dhabi",
+        "stat_id": "53",
+        "date_time.year": "2026",
+        "date_time.month": "November",
+        "date_time.day": "26"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.track_lists",
+      "from": "schedule.track_lists.track_event_list[_metadata_=F1_2026_full]",
+      "set": {
+        "_metadata_": "dejw_swofty_calendar_2016",
+        "_fixed_event_reference_instancecount_": "21",
+        "fixed_event_reference_0.event_name": "dejw_calendar_2016_01",
+        "fixed_event_reference_1.event_name": "dejw_calendar_2016_02",
+        "fixed_event_reference_2.event_name": "dejw_calendar_2016_03",
+        "fixed_event_reference_3.event_name": "dejw_calendar_2016_04",
+        "fixed_event_reference_4.event_name": "dejw_calendar_2016_05",
+        "fixed_event_reference_5.event_name": "dejw_calendar_2016_06",
+        "fixed_event_reference_6.event_name": "dejw_calendar_2016_07",
+        "fixed_event_reference_7.event_name": "dejw_calendar_2016_08",
+        "fixed_event_reference_8.event_name": "dejw_calendar_2016_09",
+        "fixed_event_reference_9.event_name": "dejw_calendar_2016_10",
+        "fixed_event_reference_10.event_name": "dejw_calendar_2016_11",
+        "fixed_event_reference_11.event_name": "dejw_calendar_2016_12",
+        "fixed_event_reference_12.event_name": "dejw_calendar_2016_13",
+        "fixed_event_reference_13.event_name": "dejw_calendar_2016_14",
+        "fixed_event_reference_14.event_name": "dejw_calendar_2016_15",
+        "fixed_event_reference_15.event_name": "dejw_calendar_2016_16",
+        "fixed_event_reference_16.event_name": "dejw_calendar_2016_17",
+        "fixed_event_reference_17.event_name": "dejw_calendar_2016_18",
+        "fixed_event_reference_18.event_name": "dejw_calendar_2016_19",
+        "fixed_event_reference_19.event_name": "dejw_calendar_2016_20",
+        "fixed_event_reference_20.event_name": "dejw_calendar_2016_21"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2017_01",
+        "activity": "melbourne",
+        "stat_id": "54",
+        "date_time.year": "2026",
+        "date_time.month": "March",
+        "date_time.day": "26"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2017_02",
+        "activity": "shanghai",
+        "stat_id": "55",
+        "date_time.year": "2026",
+        "date_time.month": "April",
+        "date_time.day": "9"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2017_03",
+        "activity": "bahrain",
+        "stat_id": "56",
+        "date_time.year": "2026",
+        "date_time.month": "April",
+        "date_time.day": "16"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2017_04",
+        "activity": "jeddah",
+        "stat_id": "57",
+        "date_time.year": "2026",
+        "date_time.month": "April",
+        "date_time.day": "30"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2017_05",
+        "activity": "catalunya",
+        "stat_id": "58",
+        "date_time.year": "2026",
+        "date_time.month": "May",
+        "date_time.day": "14"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2017_06",
+        "activity": "monaco",
+        "stat_id": "59",
+        "date_time.year": "2026",
+        "date_time.month": "May",
+        "date_time.day": "28"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2017_07",
+        "activity": "montreal",
+        "stat_id": "60",
+        "date_time.year": "2026",
+        "date_time.month": "June",
+        "date_time.day": "11"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2017_08",
+        "activity": "baku",
+        "stat_id": "61",
+        "date_time.year": "2026",
+        "date_time.month": "June",
+        "date_time.day": "25"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2017_09",
+        "activity": "austria",
+        "stat_id": "62",
+        "date_time.year": "2026",
+        "date_time.month": "July",
+        "date_time.day": "9"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2017_10",
+        "activity": "silverstone",
+        "stat_id": "63",
+        "date_time.year": "2026",
+        "date_time.month": "July",
+        "date_time.day": "16"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2017_11",
+        "activity": "hungaroring",
+        "stat_id": "64",
+        "date_time.year": "2026",
+        "date_time.month": "July",
+        "date_time.day": "30"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2017_12",
+        "activity": "spa_francorchamps",
+        "stat_id": "65",
+        "date_time.year": "2026",
+        "date_time.month": "August",
+        "date_time.day": "27"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2017_13",
+        "activity": "monza",
+        "stat_id": "66",
+        "date_time.year": "2026",
+        "date_time.month": "September",
+        "date_time.day": "3"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2017_14",
+        "activity": "singapore",
+        "stat_id": "67",
+        "date_time.year": "2026",
+        "date_time.month": "September",
+        "date_time.day": "17"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2017_15",
+        "activity": "losail",
+        "stat_id": "68",
+        "date_time.year": "2026",
+        "date_time.month": "October",
+        "date_time.day": "1"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2017_16",
+        "activity": "suzuka",
+        "stat_id": "69",
+        "date_time.year": "2026",
+        "date_time.month": "October",
+        "date_time.day": "8"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2017_17",
+        "activity": "texas",
+        "stat_id": "70",
+        "date_time.year": "2026",
+        "date_time.month": "October",
+        "date_time.day": "22"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2017_18",
+        "activity": "mexico",
+        "stat_id": "71",
+        "date_time.year": "2026",
+        "date_time.month": "October",
+        "date_time.day": "29"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2017_19",
+        "activity": "brazil",
+        "stat_id": "72",
+        "date_time.year": "2026",
+        "date_time.month": "November",
+        "date_time.day": "12"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2017_20",
+        "activity": "abu_dhabi",
+        "stat_id": "73",
+        "date_time.year": "2026",
+        "date_time.month": "November",
+        "date_time.day": "26"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.track_lists",
+      "from": "schedule.track_lists.track_event_list[_metadata_=F1_2026_full]",
+      "set": {
+        "_metadata_": "dejw_swofty_calendar_2017",
+        "_fixed_event_reference_instancecount_": "20",
+        "fixed_event_reference_0.event_name": "dejw_calendar_2017_01",
+        "fixed_event_reference_1.event_name": "dejw_calendar_2017_02",
+        "fixed_event_reference_2.event_name": "dejw_calendar_2017_03",
+        "fixed_event_reference_3.event_name": "dejw_calendar_2017_04",
+        "fixed_event_reference_4.event_name": "dejw_calendar_2017_05",
+        "fixed_event_reference_5.event_name": "dejw_calendar_2017_06",
+        "fixed_event_reference_6.event_name": "dejw_calendar_2017_07",
+        "fixed_event_reference_7.event_name": "dejw_calendar_2017_08",
+        "fixed_event_reference_8.event_name": "dejw_calendar_2017_09",
+        "fixed_event_reference_9.event_name": "dejw_calendar_2017_10",
+        "fixed_event_reference_10.event_name": "dejw_calendar_2017_11",
+        "fixed_event_reference_11.event_name": "dejw_calendar_2017_12",
+        "fixed_event_reference_12.event_name": "dejw_calendar_2017_13",
+        "fixed_event_reference_13.event_name": "dejw_calendar_2017_14",
+        "fixed_event_reference_14.event_name": "dejw_calendar_2017_15",
+        "fixed_event_reference_15.event_name": "dejw_calendar_2017_16",
+        "fixed_event_reference_16.event_name": "dejw_calendar_2017_17",
+        "fixed_event_reference_17.event_name": "dejw_calendar_2017_18",
+        "fixed_event_reference_18.event_name": "dejw_calendar_2017_19",
+        "fixed_event_reference_19.event_name": "dejw_calendar_2017_20"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2018_01",
+        "activity": "melbourne",
+        "stat_id": "74",
+        "date_time.year": "2026",
+        "date_time.month": "March",
+        "date_time.day": "19"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2018_02",
+        "activity": "bahrain",
+        "stat_id": "75",
+        "date_time.year": "2026",
+        "date_time.month": "April",
+        "date_time.day": "2"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2018_03",
+        "activity": "shanghai",
+        "stat_id": "76",
+        "date_time.year": "2026",
+        "date_time.month": "April",
+        "date_time.day": "9"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2018_04",
+        "activity": "baku",
+        "stat_id": "77",
+        "date_time.year": "2026",
+        "date_time.month": "April",
+        "date_time.day": "23"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2018_05",
+        "activity": "catalunya",
+        "stat_id": "78",
+        "date_time.year": "2026",
+        "date_time.month": "May",
+        "date_time.day": "7"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2018_06",
+        "activity": "monaco",
+        "stat_id": "79",
+        "date_time.year": "2026",
+        "date_time.month": "May",
+        "date_time.day": "21"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2018_07",
+        "activity": "montreal",
+        "stat_id": "80",
+        "date_time.year": "2026",
+        "date_time.month": "June",
+        "date_time.day": "4"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2018_08",
+        "activity": "imola",
+        "stat_id": "81",
+        "date_time.year": "2026",
+        "date_time.month": "June",
+        "date_time.day": "18"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2018_09",
+        "activity": "austria",
+        "stat_id": "82",
+        "date_time.year": "2026",
+        "date_time.month": "June",
+        "date_time.day": "25"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2018_10",
+        "activity": "silverstone",
+        "stat_id": "83",
+        "date_time.year": "2026",
+        "date_time.month": "July",
+        "date_time.day": "2"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2018_11",
+        "activity": "zandvoort",
+        "stat_id": "84",
+        "date_time.year": "2026",
+        "date_time.month": "July",
+        "date_time.day": "16"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2018_12",
+        "activity": "hungaroring",
+        "stat_id": "85",
+        "date_time.year": "2026",
+        "date_time.month": "July",
+        "date_time.day": "23"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2018_13",
+        "activity": "spa_francorchamps",
+        "stat_id": "86",
+        "date_time.year": "2026",
+        "date_time.month": "August",
+        "date_time.day": "20"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2018_14",
+        "activity": "monza",
+        "stat_id": "87",
+        "date_time.year": "2026",
+        "date_time.month": "August",
+        "date_time.day": "27"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2018_15",
+        "activity": "singapore",
+        "stat_id": "88",
+        "date_time.year": "2026",
+        "date_time.month": "September",
+        "date_time.day": "10"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2018_16",
+        "activity": "jeddah",
+        "stat_id": "89",
+        "date_time.year": "2026",
+        "date_time.month": "September",
+        "date_time.day": "24"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2018_17",
+        "activity": "suzuka",
+        "stat_id": "90",
+        "date_time.year": "2026",
+        "date_time.month": "October",
+        "date_time.day": "1"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2018_18",
+        "activity": "texas",
+        "stat_id": "91",
+        "date_time.year": "2026",
+        "date_time.month": "October",
+        "date_time.day": "15"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2018_19",
+        "activity": "mexico",
+        "stat_id": "92",
+        "date_time.year": "2026",
+        "date_time.month": "October",
+        "date_time.day": "22"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2018_20",
+        "activity": "brazil",
+        "stat_id": "93",
+        "date_time.year": "2026",
+        "date_time.month": "November",
+        "date_time.day": "5"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2018_21",
+        "activity": "abu_dhabi",
+        "stat_id": "94",
+        "date_time.year": "2026",
+        "date_time.month": "November",
+        "date_time.day": "19"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.track_lists",
+      "from": "schedule.track_lists.track_event_list[_metadata_=F1_2026_full]",
+      "set": {
+        "_metadata_": "dejw_swofty_calendar_2018",
+        "_fixed_event_reference_instancecount_": "21",
+        "fixed_event_reference_0.event_name": "dejw_calendar_2018_01",
+        "fixed_event_reference_1.event_name": "dejw_calendar_2018_02",
+        "fixed_event_reference_2.event_name": "dejw_calendar_2018_03",
+        "fixed_event_reference_3.event_name": "dejw_calendar_2018_04",
+        "fixed_event_reference_4.event_name": "dejw_calendar_2018_05",
+        "fixed_event_reference_5.event_name": "dejw_calendar_2018_06",
+        "fixed_event_reference_6.event_name": "dejw_calendar_2018_07",
+        "fixed_event_reference_7.event_name": "dejw_calendar_2018_08",
+        "fixed_event_reference_8.event_name": "dejw_calendar_2018_09",
+        "fixed_event_reference_9.event_name": "dejw_calendar_2018_10",
+        "fixed_event_reference_10.event_name": "dejw_calendar_2018_11",
+        "fixed_event_reference_11.event_name": "dejw_calendar_2018_12",
+        "fixed_event_reference_12.event_name": "dejw_calendar_2018_13",
+        "fixed_event_reference_13.event_name": "dejw_calendar_2018_14",
+        "fixed_event_reference_14.event_name": "dejw_calendar_2018_15",
+        "fixed_event_reference_15.event_name": "dejw_calendar_2018_16",
+        "fixed_event_reference_16.event_name": "dejw_calendar_2018_17",
+        "fixed_event_reference_17.event_name": "dejw_calendar_2018_18",
+        "fixed_event_reference_18.event_name": "dejw_calendar_2018_19",
+        "fixed_event_reference_19.event_name": "dejw_calendar_2018_20",
+        "fixed_event_reference_20.event_name": "dejw_calendar_2018_21"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2015_01",
+        "activity": "melbourne",
+        "stat_id": "137",
+        "date_time.year": "2026",
+        "date_time.month": "March",
+        "date_time.day": "12"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2015_02",
+        "activity": "losail",
+        "stat_id": "138",
+        "date_time.year": "2026",
+        "date_time.month": "March",
+        "date_time.day": "26"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2015_03",
+        "activity": "shanghai",
+        "stat_id": "139",
+        "date_time.year": "2026",
+        "date_time.month": "April",
+        "date_time.day": "9"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2015_04",
+        "activity": "bahrain",
+        "stat_id": "140",
+        "date_time.year": "2026",
+        "date_time.month": "April",
+        "date_time.day": "16"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2015_05",
+        "activity": "catalunya",
+        "stat_id": "141",
+        "date_time.year": "2026",
+        "date_time.month": "May",
+        "date_time.day": "7"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2015_06",
+        "activity": "monaco",
+        "stat_id": "142",
+        "date_time.year": "2026",
+        "date_time.month": "May",
+        "date_time.day": "21"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2015_07",
+        "activity": "montreal",
+        "stat_id": "143",
+        "date_time.year": "2026",
+        "date_time.month": "June",
+        "date_time.day": "4"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2015_08",
+        "activity": "austria",
+        "stat_id": "144",
+        "date_time.year": "2026",
+        "date_time.month": "June",
+        "date_time.day": "18"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2015_09",
+        "activity": "silverstone",
+        "stat_id": "145",
+        "date_time.year": "2026",
+        "date_time.month": "July",
+        "date_time.day": "2"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2015_10",
+        "activity": "hungaroring",
+        "stat_id": "146",
+        "date_time.year": "2026",
+        "date_time.month": "July",
+        "date_time.day": "23"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2015_11",
+        "activity": "spa_francorchamps",
+        "stat_id": "147",
+        "date_time.year": "2026",
+        "date_time.month": "August",
+        "date_time.day": "20"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2015_12",
+        "activity": "monza",
+        "stat_id": "148",
+        "date_time.year": "2026",
+        "date_time.month": "September",
+        "date_time.day": "3"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2015_13",
+        "activity": "singapore",
+        "stat_id": "149",
+        "date_time.year": "2026",
+        "date_time.month": "September",
+        "date_time.day": "17"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2015_14",
+        "activity": "suzuka",
+        "stat_id": "150",
+        "date_time.year": "2026",
+        "date_time.month": "September",
+        "date_time.day": "24"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2015_15",
+        "activity": "jeddah",
+        "stat_id": "151",
+        "date_time.year": "2026",
+        "date_time.month": "October",
+        "date_time.day": "8"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2015_16",
+        "activity": "texas",
+        "stat_id": "152",
+        "date_time.year": "2026",
+        "date_time.month": "October",
+        "date_time.day": "22"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2015_17",
+        "activity": "mexico",
+        "stat_id": "153",
+        "date_time.year": "2026",
+        "date_time.month": "October",
+        "date_time.day": "29"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2015_18",
+        "activity": "brazil",
+        "stat_id": "154",
+        "date_time.year": "2026",
+        "date_time.month": "November",
+        "date_time.day": "12"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2015_19",
+        "activity": "abu_dhabi",
+        "stat_id": "155",
+        "date_time.year": "2026",
+        "date_time.month": "November",
+        "date_time.day": "26"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "add-row",
+      "table": "schedule.track_lists",
+      "from": "schedule.track_lists.track_event_list[_metadata_=F1_2026_full]",
+      "set": {
+        "_metadata_": "dejw_swofty_calendar_2015",
+        "_fixed_event_reference_instancecount_": "19",
+        "fixed_event_reference_0.event_name": "dejw_calendar_2015_01",
+        "fixed_event_reference_1.event_name": "dejw_calendar_2015_02",
+        "fixed_event_reference_2.event_name": "dejw_calendar_2015_03",
+        "fixed_event_reference_3.event_name": "dejw_calendar_2015_04",
+        "fixed_event_reference_4.event_name": "dejw_calendar_2015_05",
+        "fixed_event_reference_5.event_name": "dejw_calendar_2015_06",
+        "fixed_event_reference_6.event_name": "dejw_calendar_2015_07",
+        "fixed_event_reference_7.event_name": "dejw_calendar_2015_08",
+        "fixed_event_reference_8.event_name": "dejw_calendar_2015_09",
+        "fixed_event_reference_9.event_name": "dejw_calendar_2015_10",
+        "fixed_event_reference_10.event_name": "dejw_calendar_2015_11",
+        "fixed_event_reference_11.event_name": "dejw_calendar_2015_12",
+        "fixed_event_reference_12.event_name": "dejw_calendar_2015_13",
+        "fixed_event_reference_13.event_name": "dejw_calendar_2015_14",
+        "fixed_event_reference_14.event_name": "dejw_calendar_2015_15",
+        "fixed_event_reference_15.event_name": "dejw_calendar_2015_16",
+        "fixed_event_reference_16.event_name": "dejw_calendar_2015_17",
+        "fixed_event_reference_17.event_name": "dejw_calendar_2015_18",
+        "fixed_event_reference_18.event_name": "dejw_calendar_2015_19"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
+      "op": "set",
+      "select": "schedule.all_track_events.fixed_event[_metadata_=rw_paul_ricard]",
+      "field": "activity",
+      "value": "shanghai",
+      "create": false
+    }
+  ]
+}
