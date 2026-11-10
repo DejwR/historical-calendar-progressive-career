@@ -1,4 +1,4 @@
-# Historical Calendar for Progressive Career 1.1.1
+# Historical Calendar for Progressive Career 1.1.2
 
 By Dejw. Requires Swofty's Progressive Career. Update it to 0.4.0 or later for the 2015 start.
 Choose a starting year in Progressive Career and use Full Season.
@@ -31,6 +31,11 @@ Obtain each track separately from its publisher. This package contains the calen
 
 ## Changelog
 
-- 1.1.1 Adds the Steam platform tag in Addon Browser.
-- 1.1.0 Adds the 19-round 2015 calendar, with optional Sepang and Sochi.
+### 1.1.2 changes since 1.0.0
+
+- Added the complete 19-round 2015 calendar and extended the supported starting years to 2015–2026. Update Progressive Career to 0.4.0 or later to start in 2015.
+- Added the 2015 Malaysian and Russian rounds to the existing Sepang and Sochi options. With the options off, Losail and Jeddah fill those slots.
+- Added the Steam platform badge in Addon Browser. This release supports Steam and requires Swofty Launcher 1.8.36 or later. EA app support is experimental and available separately for testing.
+- Added the **Source code** link to the project's GitHub repository in Addon Browser.
+
 - 1.0.0 Adds the 2016, 2017 and 2018 calendars and an optional Sepang toggle.

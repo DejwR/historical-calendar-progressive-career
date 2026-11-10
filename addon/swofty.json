@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "dejw.swofty-historical-calendars-public",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "name": "Historical Calendar for Progressive Career",
   "author": "Dejw",
   "category": "seasons",
@@ -134,6 +134,7 @@
     ]
   },
   "icon": "icon.png",
+  "repository": "https://github.com/DejwR/historical-calendar-progressive-career",
   "launcher": {
     "program": {
       "windows": "bin/optional-tracks.exe"
