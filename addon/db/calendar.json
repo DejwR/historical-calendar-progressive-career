@@ -1252,7 +1252,7 @@
       "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
       "set": {
         "_metadata_": "dejw_calendar_2020_10",
-        "activity": "montreal",
+        "activity": "miami",
         "stat_id": "169",
         "date_time.year": "2026",
         "date_time.month": "September",
@@ -1342,7 +1342,7 @@
       "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
       "set": {
         "_metadata_": "dejw_calendar_2020_16",
-        "activity": "bahrain",
+        "activity": "jeddah",
         "stat_id": "175",
         "date_time.year": "2026",
         "date_time.month": "December",
@@ -1490,7 +1490,7 @@
       "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
       "set": {
         "_metadata_": "dejw_calendar_2021_07",
-        "activity": "shanghai",
+        "activity": "madrid",
         "stat_id": "183",
         "date_time.year": "2026",
         "date_time.month": "June",
@@ -1610,7 +1610,7 @@
       "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
       "set": {
         "_metadata_": "dejw_calendar_2021_15",
-        "activity": "montreal",
+        "activity": "miami",
         "stat_id": "191",
         "date_time.year": "2026",
         "date_time.month": "September",
@@ -2263,7 +2263,7 @@
       "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
       "set": {
         "_metadata_": "dejw_calendar_2019_08",
-        "activity": "imola",
+        "activity": "madrid",
         "stat_id": "230",
         "date_time.year": "2026",
         "date_time.month": "June",
@@ -2383,7 +2383,7 @@
       "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
       "set": {
         "_metadata_": "dejw_calendar_2019_16",
-        "activity": "jeddah",
+        "activity": "miami",
         "stat_id": "238",
         "date_time.year": "2026",
         "date_time.month": "September",
@@ -2505,31 +2505,30 @@
       "from": "schedule.track_lists.track_event_list[_metadata_=F1_2026_full]",
       "set": {
         "_metadata_": "dejw_swofty_calendar_2026",
-        "_fixed_event_reference_instancecount_": "24",
+        "_fixed_event_reference_instancecount_": "23",
         "fixed_event_reference_0.event_name": "rw_melbourne_26",
         "fixed_event_reference_1.event_name": "rw_shanghai_26",
         "fixed_event_reference_2.event_name": "rw_suzuka_26",
-        "fixed_event_reference_3.event_name": "rw_bahrain_26",
-        "fixed_event_reference_4.event_name": "rw_jeddah_26",
-        "fixed_event_reference_5.event_name": "rw_miami_26",
-        "fixed_event_reference_6.event_name": "rw_montreal_26",
-        "fixed_event_reference_7.event_name": "rw_monaco_26",
-        "fixed_event_reference_8.event_name": "rw_catalunya_26",
-        "fixed_event_reference_9.event_name": "rw_austria_26",
-        "fixed_event_reference_10.event_name": "rw_silverstone_26",
-        "fixed_event_reference_11.event_name": "rw_spa_francorchamps_26",
-        "fixed_event_reference_12.event_name": "rw_hungaroring_26",
-        "fixed_event_reference_13.event_name": "rw_zandvoort_26",
-        "fixed_event_reference_14.event_name": "rw_monza_26",
-        "fixed_event_reference_15.event_name": "rw_madrid_26",
-        "fixed_event_reference_16.event_name": "rw_baku_26",
-        "fixed_event_reference_17.event_name": "rw_singapore_26",
-        "fixed_event_reference_18.event_name": "rw_texas_26",
-        "fixed_event_reference_19.event_name": "rw_mexico_26",
-        "fixed_event_reference_20.event_name": "rw_brazil_26",
-        "fixed_event_reference_21.event_name": "rw_las_vegas_26",
-        "fixed_event_reference_22.event_name": "rw_losail_26",
-        "fixed_event_reference_23.event_name": "rw_abu_dhabi_26"
+        "fixed_event_reference_3.event_name": "rw_miami_26",
+        "fixed_event_reference_4.event_name": "rw_montreal_26",
+        "fixed_event_reference_5.event_name": "rw_monaco_26",
+        "fixed_event_reference_6.event_name": "rw_catalunya_26",
+        "fixed_event_reference_7.event_name": "rw_austria_26",
+        "fixed_event_reference_8.event_name": "rw_silverstone_26",
+        "fixed_event_reference_9.event_name": "rw_spa_francorchamps_26",
+        "fixed_event_reference_10.event_name": "rw_hungaroring_26",
+        "fixed_event_reference_11.event_name": "rw_zandvoort_26",
+        "fixed_event_reference_12.event_name": "rw_monza_26",
+        "fixed_event_reference_13.event_name": "rw_madrid_26",
+        "fixed_event_reference_14.event_name": "rw_baku_26",
+        "fixed_event_reference_15.event_name": "dejw_calendar_2026_04",
+        "fixed_event_reference_16.event_name": "rw_singapore_26",
+        "fixed_event_reference_17.event_name": "rw_texas_26",
+        "fixed_event_reference_18.event_name": "rw_mexico_26",
+        "fixed_event_reference_19.event_name": "rw_brazil_26",
+        "fixed_event_reference_20.event_name": "rw_las_vegas_26",
+        "fixed_event_reference_21.event_name": "rw_losail_26",
+        "fixed_event_reference_22.event_name": "rw_abu_dhabi_26"
       },
       "copy": "all",
       "stat_id": "keep"
@@ -2585,7 +2584,7 @@
       "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
       "set": {
         "_metadata_": "dejw_calendar_2016_04",
-        "activity": "jeddah",
+        "activity": "miami",
         "stat_id": "36",
         "date_time.year": "2026",
         "date_time.month": "April",
@@ -2932,7 +2931,7 @@
       "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
       "set": {
         "_metadata_": "dejw_calendar_2017_04",
-        "activity": "jeddah",
+        "activity": "miami",
         "stat_id": "57",
         "date_time.year": "2026",
         "date_time.month": "April",
@@ -3323,7 +3322,7 @@
       "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
       "set": {
         "_metadata_": "dejw_calendar_2018_08",
-        "activity": "imola",
+        "activity": "madrid",
         "stat_id": "81",
         "date_time.year": "2026",
         "date_time.month": "June",
@@ -3443,7 +3442,7 @@
       "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
       "set": {
         "_metadata_": "dejw_calendar_2018_16",
-        "activity": "jeddah",
+        "activity": "miami",
         "stat_id": "89",
         "date_time.year": "2026",
         "date_time.month": "September",
@@ -3775,7 +3774,7 @@
       "from": "schedule.all_track_events.fixed_event[_metadata_=rw_melbourne_26]",
       "set": {
         "_metadata_": "dejw_calendar_2015_15",
-        "activity": "jeddah",
+        "activity": "miami",
         "stat_id": "151",
         "date_time.year": "2026",
         "date_time.month": "October",
@@ -3875,10 +3874,24 @@
       "stat_id": "keep"
     },
     {
+      "op": "add-row",
+      "table": "schedule.all_track_events",
+      "from": "schedule.all_track_events.fixed_event[_metadata_=rw_bahrain_26]",
+      "set": {
+        "_metadata_": "dejw_calendar_2026_04",
+        "stat_id": "156",
+        "date_time.year": "2026",
+        "date_time.month": "October",
+        "date_time.day": "1"
+      },
+      "copy": "all",
+      "stat_id": "keep"
+    },
+    {
       "op": "set",
       "select": "schedule.all_track_events.fixed_event[_metadata_=rw_paul_ricard]",
       "field": "activity",
-      "value": "shanghai",
+      "value": "madrid",
       "create": false
     }
   ]

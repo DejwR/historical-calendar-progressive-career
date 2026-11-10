@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "dejw.swofty-historical-calendars-public",
-  "version": "1.1.2",
+  "version": "1.3.1",
   "name": "Historical Calendar for Progressive Career",
   "author": "Dejw",
   "category": "seasons",
@@ -10,7 +10,7 @@
     "native",
     "text"
   ],
-  "description": "Season calendars for Swofty Progressive Career, from 2015 to 2026. Steam only. EA app is unsupported in this release. Optional track addons are off by default and use standard circuits as substitutes.",
+  "description": "Season calendars for Swofty Progressive Career, from 2015 to 2026. Steam only. EA app is unsupported in this release. Grand Prix settings let you choose optional historical circuits.",
   "compat": {
     "game": "f1_25",
     "game_builds": [
@@ -48,76 +48,188 @@
   ],
   "options": [
     {
-      "id": "use_paul_ricard",
-      "type": "toggle",
-      "label": "Use Paul Ricard",
-      "default": false,
+      "id": "tuscany_2020",
+      "type": "choice",
+      "label": "Tuscan Grand Prix (2020)",
+      "default": "suzuka",
       "binds": "db",
-      "description": "Requires twilight.paul-ricard enabled in this profile. Standard substitute: Imola (2018, 2019), Shanghai (2021, 2022)."
+      "values": [
+        {
+          "value": "suzuka",
+          "label": "Suzuka"
+        },
+        {
+          "value": "jerez",
+          "label": "Jerez"
+        },
+        {
+          "value": "mugello",
+          "label": "Mugello"
+        }
+      ],
+      "description": "The selected circuit addon must be enabled in this profile. Suzuka is used if the addon is unavailable."
     },
     {
-      "id": "use_portimao",
-      "type": "toggle",
-      "label": "Use Portimao",
-      "default": false,
+      "id": "france_gp",
+      "type": "choice",
+      "label": "France Grand Prix (2018, 2019, 2021, 2022)",
+      "default": "madrid",
       "binds": "db",
-      "description": "Requires mod.portimao enabled in this profile. Standard substitute: Melbourne (2020, 2021)."
+      "values": [
+        {
+          "value": "madrid",
+          "label": "Madrid"
+        },
+        {
+          "value": "paul_ricard",
+          "label": "Paul Ricard"
+        }
+      ],
+      "description": "The selected circuit addon must be enabled in this profile. Madrid is used if the addon is unavailable."
     },
     {
-      "id": "use_jerez",
-      "type": "toggle",
-      "label": "Use Jerez",
-      "default": false,
+      "id": "portugal_gp",
+      "type": "choice",
+      "label": "Portugal Grand Prix (2020, 2021)",
+      "default": "melbourne",
       "binds": "db",
-      "description": "Requires pajko.jerez enabled in this profile. Standard substitute: Suzuka (2020)."
+      "values": [
+        {
+          "value": "melbourne",
+          "label": "Melbourne"
+        },
+        {
+          "value": "portimao",
+          "label": "Portim\u00e3o"
+        }
+      ],
+      "description": "The selected circuit addon must be enabled in this profile. Melbourne is used if the addon is unavailable."
     },
     {
-      "id": "use_sochi",
-      "type": "toggle",
-      "label": "Use Sochi",
-      "default": false,
+      "id": "russia_gp",
+      "type": "choice",
+      "label": "Russia Grand Prix (2015, 2016, 2017, 2018, 2019, 2020, 2021)",
+      "default": "miami",
       "binds": "db",
-      "description": "Requires mod.sochi enabled in this profile. Standard substitute: Jeddah (2015, 2016, 2017, 2018, 2019), Montreal (2020, 2021)."
+      "values": [
+        {
+          "value": "miami",
+          "label": "Miami"
+        },
+        {
+          "value": "sochi",
+          "label": "Sochi"
+        }
+      ],
+      "description": "The selected circuit addon must be enabled in this profile. Miami is used if the addon is unavailable."
     },
     {
-      "id": "use_nurburgring",
-      "type": "toggle",
-      "label": "Use Nurburgring",
-      "default": false,
+      "id": "germany_gp",
+      "type": "choice",
+      "label": "Germany Grand Prix (2016, 2018, 2019)",
+      "default": "zandvoort",
       "binds": "db",
-      "description": "Requires mod.nurburgring enabled in this profile. Standard substitute: Zandvoort (2020)."
+      "values": [
+        {
+          "value": "zandvoort",
+          "label": "Zandvoort"
+        },
+        {
+          "value": "hockenheim",
+          "label": "Hockenheim"
+        }
+      ],
+      "description": "The selected circuit addon must be enabled in this profile. Zandvoort is used if the addon is unavailable."
     },
     {
-      "id": "use_istanbul_park",
-      "type": "toggle",
-      "label": "Use Istanbul Park",
-      "default": false,
+      "id": "turkey_gp",
+      "type": "choice",
+      "label": "Turkey Grand Prix (2020, 2021)",
+      "default": "singapore",
       "binds": "db",
-      "description": "Requires track.istanbul_park enabled in this profile. Standard substitute: Singapore (2020, 2021)."
+      "values": [
+        {
+          "value": "singapore",
+          "label": "Singapore"
+        },
+        {
+          "value": "istanbul_park",
+          "label": "Istanbul Park"
+        }
+      ],
+      "description": "The selected circuit addon must be enabled in this profile. Singapore is used if the addon is unavailable."
     },
     {
-      "id": "use_bahrain_outer",
-      "type": "toggle",
-      "label": "Use Bahrain Outer",
-      "default": false,
+      "id": "sakhir_gp",
+      "type": "choice",
+      "label": "Sakhir Grand Prix (2020)",
+      "default": "jeddah",
       "binds": "db",
-      "description": "Requires track.bahrain_outer enabled in this profile. Standard substitute: Bahrain GP (2020)."
+      "values": [
+        {
+          "value": "jeddah",
+          "label": "Jeddah"
+        },
+        {
+          "value": "bahrain_outer",
+          "label": "Bahrain Outer"
+        }
+      ],
+      "description": "The selected circuit addon must be enabled in this profile. Jeddah is used if the addon is unavailable."
     },
     {
-      "id": "use_hockenheim",
-      "type": "toggle",
-      "label": "Use Hockenheim",
-      "default": false,
+      "id": "eifel_gp",
+      "type": "choice",
+      "label": "Eifel Grand Prix (2020)",
+      "default": "zandvoort",
       "binds": "db",
-      "description": "Requires mod.hockenheim enabled in this profile. Standard substitute: Zandvoort (2016, 2018, 2019)."
+      "values": [
+        {
+          "value": "zandvoort",
+          "label": "Zandvoort"
+        },
+        {
+          "value": "nurburgring",
+          "label": "N\u00fcrburgring"
+        }
+      ],
+      "description": "The selected circuit addon must be enabled in this profile. Zandvoort is used if the addon is unavailable."
     },
     {
-      "id": "use_sepang",
-      "type": "toggle",
-      "label": "Use Sepang",
-      "default": false,
+      "id": "malaysia_gp",
+      "type": "choice",
+      "label": "Malaysia Grand Prix (2015, 2016, 2017)",
+      "default": "losail",
       "binds": "db",
-      "description": "Requires mod.bahrain24 enabled in this profile. Standard substitute: Losail (2015, 2016, 2017)."
+      "values": [
+        {
+          "value": "losail",
+          "label": "Lusail"
+        },
+        {
+          "value": "bahrain24",
+          "label": "Sepang"
+        }
+      ],
+      "description": "The selected circuit addon must be enabled in this profile. Lusail is used if the addon is unavailable."
+    },
+    {
+      "id": "bahrain_2026",
+      "type": "choice",
+      "label": "Bahrain Grand Prix (2026)",
+      "default": "bahrain",
+      "binds": "db",
+      "values": [
+        {
+          "value": "bahrain",
+          "label": "Bahrain"
+        },
+        {
+          "value": "bahrain24",
+          "label": "Sepang"
+        }
+      ],
+      "description": "The selected circuit addon must be enabled in this profile. Bahrain is used if the addon is unavailable."
     }
   ],
   "operations": {

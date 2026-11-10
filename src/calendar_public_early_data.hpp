@@ -14,3 +14,7 @@ constexpr char list_2015[] = "dejw_swofty_calendar_2015";
 constexpr std::array<uint8_t, 19> ids_2015{137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155};
 constexpr std::array<uint8_t, 19> tracks_2015{0, 255, 2, 3, 4, 5, 6, 17, 7, 9, 10, 11, 12, 13, 255, 15, 19, 16, 14};
 constexpr std::array<const char *, 19> track_codes_2015{"", "bahrain24", "", "", "", "", "", "", "", "", "", "", "", "", "sochi", "", "", "", ""};
+constexpr size_t bahrain_index_2026 = 15;
+constexpr char bahrain_event_2026[] = "dejw_calendar_2026_04";
+constexpr std::array<uint8_t, 23> public_ids_2026{110, 111, 112, 115, 116, 117, 118, 119, 121, 123, 124, 125, 127, 128, 129, 156, 130, 131, 132, 133, 134, 135, 136};
+constexpr std::array<uint8_t, 23> public_tracks_2026{0, 2, 13, 30, 6, 5, 4, 17, 7, 10, 9, 26, 11, 42, 20, 3, 12, 15, 19, 16, 31, 32, 14};

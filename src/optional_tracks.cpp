@@ -50,7 +50,8 @@ Value build(const Value &params, bool supports_addons)
     auto result = Value::object({{"ops", Value::array()}, {"warnings", Value::array()}});
     std::vector<const Value *> selected;
     for (const auto &track : *tracks) {
-        if (params["options"][track["option"].as_string()].as_bool())
+        const auto &option = params["options"][track["option"].as_string()];
+        if (option.is_string() && option.as_string() == track["value"].as_string())
             selected.push_back(&track);
     }
     if (selected.empty())
@@ -60,6 +61,7 @@ Value build(const Value &params, bool supports_addons)
 
     const auto addons = installed_addons();
     const auto &installed = *addons.if_array();
+    auto &build_ops = *result["ops"].if_array();
     for (const auto *track : selected) {
         const auto id = (*track)["addon"].as_string();
         const auto name = std::string((*track)["name"].as_string());
@@ -75,8 +77,11 @@ Value build(const Value &params, bool supports_addons)
         const auto *ops = (*track)["ops"].if_array();
         if (!ops)
             throw std::runtime_error("Missing calendar operations for " + name);
-        for (const auto &op : *ops)
-            result["ops"].push_back(op);
+        for (const auto &op : *ops) {
+            // Both Sepang settings share one activity row and one set of labels.
+            if (std::ranges::find(build_ops, op) == build_ops.end())
+                build_ops.push_back(op);
+        }
     }
     return result;
 }

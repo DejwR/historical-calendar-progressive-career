@@ -4,7 +4,7 @@ Calendar addon for Swofty's Progressive Career in F1 25. See [addon/README.md](a
 
 ## Download
 
-[Historical Calendar 1.1.2 for Swofty Launcher](downloads/Historical_Calendar_for_Progressive_Career_v1.1.2.swoftyaddon)
+[Historical Calendar 1.3.1 for Swofty Launcher](downloads/Historical_Calendar_for_Progressive_Career_v1.3.1.swoftyaddon)
 
 This release supports Steam on Windows and requires Swofty Launcher 1.8.36 or later.
 See the [changelog](addon/README.md#changelog) for changes since 1.0.0.

@@ -65,7 +65,11 @@ constexpr std::array calendars{
     Calendar{list_2023, ids_2023, tracks_2023},
     Calendar{list_2024, ids_2024, tracks_2024},
     Calendar{list_2025, ids_2025, tracks_2025},
+#ifdef DEJW_PUBLIC_RELEASE
+    Calendar{list_2026, public_ids_2026, public_tracks_2026},
+#else
     Calendar{list_2026, ids_2026, tracks_2026},
+#endif
 };
 static_assert(calendars.size() == last_year - first_year + 1);
 
@@ -291,6 +295,8 @@ int configured_track_id(int year, size_t index)
     char event_name[64]{};
     if (year == 2022)
         std::snprintf(event_name, sizeof(event_name), "rw_paul_ricard");
+    else if (year == 2026)
+        std::snprintf(event_name, sizeof(event_name), "%s", bahrain_event_2026);
     else
         std::snprintf(event_name, sizeof(event_name), "dejw_calendar_%d_%02zu", year, index + 1);
 
@@ -322,7 +328,8 @@ void log_saved_calendar(void *entity, uint32_t index, int year, const Calendar &
         uint8_t track{};
 #ifdef DEJW_PUBLIC_RELEASE
         const bool optional = (!calendar.track_codes.empty() && *calendar.track_codes[i]) ||
-            (year == 2022 && calendar.events[i] == 1);
+            (year == 2022 && calendar.events[i] == 1) ||
+            (year == 2026 && i == bahrain_index_2026);
         int expected = optional ? configured_track_id(year, i) : calendar.tracks[i];
 #else
         int expected = finale ? calendar.tracks.back() : calendar.tracks[i];

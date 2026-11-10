@@ -1,64 +1,9 @@
 [
   {
-    "option": "use_paul_ricard",
-    "addon": "twilight.paul-ricard",
-    "name": "Paul Ricard",
-    "ops": [
-      {
-        "op": "db.set",
-        "select": "schedule.all_track_events.fixed_event[_metadata_=dejw_calendar_2018_08]",
-        "field": "activity",
-        "value": "paul_ricard",
-        "create": false
-      },
-      {
-        "op": "db.set",
-        "select": "schedule.all_track_events.fixed_event[_metadata_=rw_paul_ricard]",
-        "field": "activity",
-        "value": "paul_ricard",
-        "create": false
-      },
-      {
-        "op": "db.set",
-        "select": "schedule.all_track_events.fixed_event[_metadata_=dejw_calendar_2021_07]",
-        "field": "activity",
-        "value": "paul_ricard",
-        "create": false
-      },
-      {
-        "op": "db.set",
-        "select": "schedule.all_track_events.fixed_event[_metadata_=dejw_calendar_2019_08]",
-        "field": "activity",
-        "value": "paul_ricard",
-        "create": false
-      }
-    ]
-  },
-  {
-    "option": "use_portimao",
-    "addon": "mod.portimao",
-    "name": "Portimao",
-    "ops": [
-      {
-        "op": "db.set",
-        "select": "schedule.all_track_events.fixed_event[_metadata_=dejw_calendar_2020_12]",
-        "field": "activity",
-        "value": "portimao",
-        "create": false
-      },
-      {
-        "op": "db.set",
-        "select": "schedule.all_track_events.fixed_event[_metadata_=dejw_calendar_2021_03]",
-        "field": "activity",
-        "value": "portimao",
-        "create": false
-      }
-    ]
-  },
-  {
-    "option": "use_jerez",
+    "option": "tuscany_2020",
+    "value": "jerez",
     "addon": "pajko.jerez",
-    "name": "Jerez",
+    "name": "Jerez (Tuscan Grand Prix (2020))",
     "ops": [
       {
         "op": "db.add-row",
@@ -82,9 +27,188 @@
     ]
   },
   {
-    "option": "use_sochi",
+    "option": "tuscany_2020",
+    "value": "mugello",
+    "addon": "mod.mugello",
+    "name": "Mugello (Tuscan Grand Prix (2020))",
+    "ops": [
+      {
+        "op": "db.add-row",
+        "table": "schedule.activities",
+        "from": "schedule.activities.activity_race_weekend[_metadata_=imola]",
+        "set": {
+          "_metadata_": "dejw_career_mugello",
+          "track": "mugello",
+          "stat_id": "147"
+        },
+        "copy": "all",
+        "stat_id": "keep"
+      },
+      {
+        "op": "db.set",
+        "select": "schedule.all_track_events.fixed_event[_metadata_=dejw_calendar_2020_09]",
+        "field": "activity",
+        "value": "dejw_career_mugello",
+        "create": false
+      },
+      {
+        "op": "db.set",
+        "select": "track_data.game_setup.TrackDataSet[_metadata_=f1_2026].TrackData[_metadata_=mugello].TrackNameData_0",
+        "field": "acronym_name",
+        "value": "lng_dejw_swofty_mugello_tla",
+        "create": false
+      },
+      {
+        "op": "db.set",
+        "select": "track_data.game_setup.TrackDataSet[_metadata_=f1_2026].TrackData[_metadata_=mugello].TrackNameData_0",
+        "field": "circuit",
+        "value": "lng_dejw_swofty_mugello_circuit",
+        "create": false
+      },
+      {
+        "op": "db.set",
+        "select": "track_data.game_setup.TrackDataSet[_metadata_=f1_2026].TrackData[_metadata_=mugello].TrackNameData_0",
+        "field": "city_name",
+        "value": "lng_dejw_swofty_mugello_city",
+        "create": false
+      },
+      {
+        "op": "db.set",
+        "select": "track_data.game_setup.TrackDataSet[_metadata_=f1_2026].TrackData[_metadata_=mugello].TrackNameData_0",
+        "field": "city_name_short",
+        "value": "lng_dejw_swofty_mugello_city",
+        "create": false
+      },
+      {
+        "op": "db.set",
+        "select": "track_data.game_setup.TrackDataSet[_metadata_=f1_2026].TrackData[_metadata_=mugello].TrackNameData_0",
+        "field": "country_name",
+        "value": "lng_dejw_swofty_mugello_country",
+        "create": false
+      },
+      {
+        "op": "db.set",
+        "select": "track_data.game_setup.TrackDataSet[_metadata_=f1_2026].TrackData[_metadata_=mugello].TrackNameData_0",
+        "field": "gp_long_name",
+        "value": "lng_dejw_swofty_mugello_gp",
+        "create": false
+      },
+      {
+        "op": "db.set",
+        "select": "track_data.game_setup.TrackDataSet[_metadata_=f1_2026].TrackData[_metadata_=mugello].TrackNameData_0",
+        "field": "gp_long_name_multiline",
+        "value": "lng_dejw_swofty_mugello_gp",
+        "create": false
+      },
+      {
+        "op": "db.set",
+        "select": "track_data.game_setup.TrackDataSet[_metadata_=f1_2026].TrackData[_metadata_=mugello].TrackNameData_0",
+        "field": "gp_short_name",
+        "value": "lng_dejw_swofty_mugello_gp",
+        "create": false
+      },
+      {
+        "op": "db.set",
+        "select": "track_data.game_setup.TrackDataSet[_metadata_=f1_2026].TrackData[_metadata_=mugello].TrackNameData_0",
+        "field": "title",
+        "value": "lng_dejw_swofty_mugello_country",
+        "create": false
+      },
+      {
+        "op": "lang.set",
+        "language": "*",
+        "key": "lng_dejw_swofty_mugello_tla",
+        "value": "MUG"
+      },
+      {
+        "op": "lang.set",
+        "language": "*",
+        "key": "lng_dejw_swofty_mugello_circuit",
+        "value": "Mugello Circuit"
+      },
+      {
+        "op": "lang.set",
+        "language": "*",
+        "key": "lng_dejw_swofty_mugello_city",
+        "value": "Mugello"
+      },
+      {
+        "op": "lang.set",
+        "language": "*",
+        "key": "lng_dejw_swofty_mugello_country",
+        "value": "Italy"
+      },
+      {
+        "op": "lang.set",
+        "language": "*",
+        "key": "lng_dejw_swofty_mugello_gp",
+        "value": "Tuscan Grand Prix"
+      }
+    ]
+  },
+  {
+    "option": "france_gp",
+    "value": "paul_ricard",
+    "addon": "twilight.paul-ricard",
+    "name": "Paul Ricard (France Grand Prix (2018, 2019, 2021, 2022))",
+    "ops": [
+      {
+        "op": "db.set",
+        "select": "schedule.all_track_events.fixed_event[_metadata_=dejw_calendar_2018_08]",
+        "field": "activity",
+        "value": "paul_ricard",
+        "create": false
+      },
+      {
+        "op": "db.set",
+        "select": "schedule.all_track_events.fixed_event[_metadata_=dejw_calendar_2019_08]",
+        "field": "activity",
+        "value": "paul_ricard",
+        "create": false
+      },
+      {
+        "op": "db.set",
+        "select": "schedule.all_track_events.fixed_event[_metadata_=dejw_calendar_2021_07]",
+        "field": "activity",
+        "value": "paul_ricard",
+        "create": false
+      },
+      {
+        "op": "db.set",
+        "select": "schedule.all_track_events.fixed_event[_metadata_=rw_paul_ricard]",
+        "field": "activity",
+        "value": "paul_ricard",
+        "create": false
+      }
+    ]
+  },
+  {
+    "option": "portugal_gp",
+    "value": "portimao",
+    "addon": "mod.portimao",
+    "name": "Portim\u00e3o (Portugal Grand Prix (2020, 2021))",
+    "ops": [
+      {
+        "op": "db.set",
+        "select": "schedule.all_track_events.fixed_event[_metadata_=dejw_calendar_2020_12]",
+        "field": "activity",
+        "value": "portimao",
+        "create": false
+      },
+      {
+        "op": "db.set",
+        "select": "schedule.all_track_events.fixed_event[_metadata_=dejw_calendar_2021_03]",
+        "field": "activity",
+        "value": "portimao",
+        "create": false
+      }
+    ]
+  },
+  {
+    "option": "russia_gp",
+    "value": "sochi",
     "addon": "mod.sochi",
-    "name": "Sochi",
+    "name": "Sochi (Russia Grand Prix (2015, 2016, 2017, 2018, 2019, 2020, 2021))",
     "ops": [
       {
         "op": "db.add-row",
@@ -128,6 +252,13 @@
       },
       {
         "op": "db.set",
+        "select": "schedule.all_track_events.fixed_event[_metadata_=dejw_calendar_2019_16]",
+        "field": "activity",
+        "value": "dejw_career_sochi",
+        "create": false
+      },
+      {
+        "op": "db.set",
         "select": "schedule.all_track_events.fixed_event[_metadata_=dejw_calendar_2020_10]",
         "field": "activity",
         "value": "dejw_career_sochi",
@@ -139,105 +270,14 @@
         "field": "activity",
         "value": "dejw_career_sochi",
         "create": false
-      },
-      {
-        "op": "db.set",
-        "select": "schedule.all_track_events.fixed_event[_metadata_=dejw_calendar_2019_16]",
-        "field": "activity",
-        "value": "dejw_career_sochi",
-        "create": false
       }
     ]
   },
   {
-    "option": "use_nurburgring",
-    "addon": "mod.nurburgring",
-    "name": "Nurburgring",
-    "ops": [
-      {
-        "op": "db.add-row",
-        "table": "schedule.activities",
-        "from": "schedule.activities.activity_race_weekend[_metadata_=zandvoort]",
-        "set": {
-          "_metadata_": "dejw_career_nurburgring",
-          "track": "nurburgring",
-          "stat_id": "142"
-        },
-        "copy": "all",
-        "stat_id": "keep"
-      },
-      {
-        "op": "db.set",
-        "select": "schedule.all_track_events.fixed_event[_metadata_=dejw_calendar_2020_11]",
-        "field": "activity",
-        "value": "dejw_career_nurburgring",
-        "create": false
-      }
-    ]
-  },
-  {
-    "option": "use_istanbul_park",
-    "addon": "track.istanbul_park",
-    "name": "Istanbul Park",
-    "ops": [
-      {
-        "op": "db.add-row",
-        "table": "schedule.activities",
-        "from": "schedule.activities.activity_race_weekend[_metadata_=spa_francorchamps]",
-        "set": {
-          "_metadata_": "dejw_career_istanbul_park",
-          "track": "istanbul_park",
-          "stat_id": "143"
-        },
-        "copy": "all",
-        "stat_id": "keep"
-      },
-      {
-        "op": "db.set",
-        "select": "schedule.all_track_events.fixed_event[_metadata_=dejw_calendar_2020_14]",
-        "field": "activity",
-        "value": "dejw_career_istanbul_park",
-        "create": false
-      },
-      {
-        "op": "db.set",
-        "select": "schedule.all_track_events.fixed_event[_metadata_=dejw_calendar_2021_16]",
-        "field": "activity",
-        "value": "dejw_career_istanbul_park",
-        "create": false
-      }
-    ]
-  },
-  {
-    "option": "use_bahrain_outer",
-    "addon": "track.bahrain_outer",
-    "name": "Bahrain Outer",
-    "ops": [
-      {
-        "op": "db.add-row",
-        "table": "schedule.activities",
-        "from": "schedule.activities.activity_race_weekend[_metadata_=bahrain]",
-        "set": {
-          "_metadata_": "dejw_career_bahrain_outer",
-          "track": "bahrain_outer",
-          "stat_id": "144"
-        },
-        "copy": "all",
-        "stat_id": "keep"
-      },
-      {
-        "op": "db.set",
-        "select": "schedule.all_track_events.fixed_event[_metadata_=dejw_calendar_2020_16]",
-        "field": "activity",
-        "value": "dejw_career_bahrain_outer",
-        "create": false
-      }
-    ]
-  },
-  {
-    "option": "use_hockenheim",
+    "option": "germany_gp",
+    "value": "hockenheim",
     "addon": "mod.hockenheim",
-    "name": "Hockenheim",
+    "name": "Hockenheim (Germany Grand Prix (2016, 2018, 2019))",
     "ops": [
       {
         "op": "db.add-row",
@@ -275,9 +315,98 @@
     ]
   },
   {
-    "option": "use_sepang",
+    "option": "turkey_gp",
+    "value": "istanbul_park",
+    "addon": "track.istanbul_park",
+    "name": "Istanbul Park (Turkey Grand Prix (2020, 2021))",
+    "ops": [
+      {
+        "op": "db.add-row",
+        "table": "schedule.activities",
+        "from": "schedule.activities.activity_race_weekend[_metadata_=spa_francorchamps]",
+        "set": {
+          "_metadata_": "dejw_career_istanbul_park",
+          "track": "istanbul_park",
+          "stat_id": "143"
+        },
+        "copy": "all",
+        "stat_id": "keep"
+      },
+      {
+        "op": "db.set",
+        "select": "schedule.all_track_events.fixed_event[_metadata_=dejw_calendar_2020_14]",
+        "field": "activity",
+        "value": "dejw_career_istanbul_park",
+        "create": false
+      },
+      {
+        "op": "db.set",
+        "select": "schedule.all_track_events.fixed_event[_metadata_=dejw_calendar_2021_16]",
+        "field": "activity",
+        "value": "dejw_career_istanbul_park",
+        "create": false
+      }
+    ]
+  },
+  {
+    "option": "sakhir_gp",
+    "value": "bahrain_outer",
+    "addon": "track.bahrain_outer",
+    "name": "Bahrain Outer (Sakhir Grand Prix (2020))",
+    "ops": [
+      {
+        "op": "db.add-row",
+        "table": "schedule.activities",
+        "from": "schedule.activities.activity_race_weekend[_metadata_=bahrain]",
+        "set": {
+          "_metadata_": "dejw_career_bahrain_outer",
+          "track": "bahrain_outer",
+          "stat_id": "144"
+        },
+        "copy": "all",
+        "stat_id": "keep"
+      },
+      {
+        "op": "db.set",
+        "select": "schedule.all_track_events.fixed_event[_metadata_=dejw_calendar_2020_16]",
+        "field": "activity",
+        "value": "dejw_career_bahrain_outer",
+        "create": false
+      }
+    ]
+  },
+  {
+    "option": "eifel_gp",
+    "value": "nurburgring",
+    "addon": "mod.nurburgring",
+    "name": "N\u00fcrburgring (Eifel Grand Prix (2020))",
+    "ops": [
+      {
+        "op": "db.add-row",
+        "table": "schedule.activities",
+        "from": "schedule.activities.activity_race_weekend[_metadata_=zandvoort]",
+        "set": {
+          "_metadata_": "dejw_career_nurburgring",
+          "track": "nurburgring",
+          "stat_id": "142"
+        },
+        "copy": "all",
+        "stat_id": "keep"
+      },
+      {
+        "op": "db.set",
+        "select": "schedule.all_track_events.fixed_event[_metadata_=dejw_calendar_2020_11]",
+        "field": "activity",
+        "value": "dejw_career_nurburgring",
+        "create": false
+      }
+    ]
+  },
+  {
+    "option": "malaysia_gp",
+    "value": "bahrain24",
     "addon": "mod.bahrain24",
-    "name": "Sepang",
+    "name": "Sepang (Malaysia Grand Prix (2015, 2016, 2017))",
     "ops": [
       {
         "op": "db.add-row",
@@ -308,6 +437,126 @@
       {
         "op": "db.set",
         "select": "schedule.all_track_events.fixed_event[_metadata_=dejw_calendar_2017_15]",
+        "field": "activity",
+        "value": "dejw_career_bahrain24",
+        "create": false
+      },
+      {
+        "op": "db.set",
+        "select": "track_data.game_setup.TrackDataSet[_metadata_=f1_2026].TrackData[_metadata_=bahrain24].TrackNameData_0",
+        "field": "acronym_name",
+        "value": "lng_dejw_swofty_sepang_tla",
+        "create": false
+      },
+      {
+        "op": "db.set",
+        "select": "track_data.game_setup.TrackDataSet[_metadata_=f1_2026].TrackData[_metadata_=bahrain24].TrackNameData_0",
+        "field": "circuit",
+        "value": "lng_dejw_swofty_sepang_circuit",
+        "create": false
+      },
+      {
+        "op": "db.set",
+        "select": "track_data.game_setup.TrackDataSet[_metadata_=f1_2026].TrackData[_metadata_=bahrain24].TrackNameData_0",
+        "field": "city_name",
+        "value": "lng_dejw_swofty_sepang_city",
+        "create": false
+      },
+      {
+        "op": "db.set",
+        "select": "track_data.game_setup.TrackDataSet[_metadata_=f1_2026].TrackData[_metadata_=bahrain24].TrackNameData_0",
+        "field": "city_name_short",
+        "value": "lng_dejw_swofty_sepang_city",
+        "create": false
+      },
+      {
+        "op": "db.set",
+        "select": "track_data.game_setup.TrackDataSet[_metadata_=f1_2026].TrackData[_metadata_=bahrain24].TrackNameData_0",
+        "field": "country_name",
+        "value": "lng_dejw_swofty_sepang_country",
+        "create": false
+      },
+      {
+        "op": "db.set",
+        "select": "track_data.game_setup.TrackDataSet[_metadata_=f1_2026].TrackData[_metadata_=bahrain24].TrackNameData_0",
+        "field": "gp_long_name",
+        "value": "lng_dejw_swofty_sepang_gp",
+        "create": false
+      },
+      {
+        "op": "db.set",
+        "select": "track_data.game_setup.TrackDataSet[_metadata_=f1_2026].TrackData[_metadata_=bahrain24].TrackNameData_0",
+        "field": "gp_long_name_multiline",
+        "value": "lng_dejw_swofty_sepang_gp",
+        "create": false
+      },
+      {
+        "op": "db.set",
+        "select": "track_data.game_setup.TrackDataSet[_metadata_=f1_2026].TrackData[_metadata_=bahrain24].TrackNameData_0",
+        "field": "gp_short_name",
+        "value": "lng_dejw_swofty_sepang_gp",
+        "create": false
+      },
+      {
+        "op": "db.set",
+        "select": "track_data.game_setup.TrackDataSet[_metadata_=f1_2026].TrackData[_metadata_=bahrain24].TrackNameData_0",
+        "field": "title",
+        "value": "lng_dejw_swofty_sepang_country",
+        "create": false
+      },
+      {
+        "op": "lang.set",
+        "language": "*",
+        "key": "lng_dejw_swofty_sepang_tla",
+        "value": "MYS"
+      },
+      {
+        "op": "lang.set",
+        "language": "*",
+        "key": "lng_dejw_swofty_sepang_circuit",
+        "value": "Sepang International Circuit"
+      },
+      {
+        "op": "lang.set",
+        "language": "*",
+        "key": "lng_dejw_swofty_sepang_city",
+        "value": "Sepang"
+      },
+      {
+        "op": "lang.set",
+        "language": "*",
+        "key": "lng_dejw_swofty_sepang_country",
+        "value": "Malaysia"
+      },
+      {
+        "op": "lang.set",
+        "language": "*",
+        "key": "lng_dejw_swofty_sepang_gp",
+        "value": "Malaysian Grand Prix"
+      }
+    ]
+  },
+  {
+    "option": "bahrain_2026",
+    "value": "bahrain24",
+    "addon": "mod.bahrain24",
+    "name": "Sepang (Bahrain Grand Prix (2026))",
+    "ops": [
+      {
+        "op": "db.add-row",
+        "table": "schedule.activities",
+        "from": "schedule.activities.activity_race_weekend[_metadata_=bahrain]",
+        "set": {
+          "_metadata_": "dejw_career_bahrain24",
+          "track": "bahrain24",
+          "stat_id": "146"
+        },
+        "copy": "all",
+        "stat_id": "keep"
+      },
+      {
+        "op": "db.set",
+        "select": "schedule.all_track_events.fixed_event[_metadata_=dejw_calendar_2026_04]",
         "field": "activity",
         "value": "dejw_career_bahrain24",
         "create": false
