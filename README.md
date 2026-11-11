@@ -4,10 +4,20 @@ Calendar addon for Swofty's Progressive Career in F1 25. See [addon/README.md](a
 
 ## Download
 
-[Historical Calendar 1.3.1 for Swofty Launcher](downloads/Historical_Calendar_for_Progressive_Career_v1.3.1.swoftyaddon)
+[Historical Calendar 1.4.0 for Swofty Launcher](downloads/Historical_Calendar_for_Progressive_Career_v1.4.0.swoftyaddon)
 
 This release supports Steam on Windows and requires Swofty Launcher 1.8.36 or later.
 See the [changelog](addon/README.md#changelog) for changes since 1.0.0.
+
+## Sprint settings
+
+Both options are enabled by default. Disable sprints (2015–2020) uses standard weekends in those seasons.
+Historical sprint weekends (2021–2026) selects the year's sprint venues. Turning that option off restores
+the game's programmed venues. Choose the options before generating a season or starting a new weekend.
+
+Launcher builds and native policy tests passed. Gameplay logs confirm the 2019 standard-weekend override
+and activation of the 2021 historical sprint policy. The saved session list and the 2020-to-2021 rollover
+still need end-to-end gameplay verification.
 
 ## Build on Windows
 

@@ -1,4 +1,4 @@
-# Historical Calendar for Progressive Career 1.3.1
+# Historical Calendar for Progressive Career 1.4.0
 
 By Dejw. Requires Swofty's Progressive Career. Update it to 0.4.0 or later for the 2015 start.
 Choose a starting year in Progressive Career and use Full Season.
@@ -11,6 +11,23 @@ track addon in the same launcher profile, then rebuild and restart from the laun
 missing or disabled, the build reports a warning and uses the default circuit. Choose the circuits before
 creating your career and keep them stable for that save. A calendar already saved in a career does not get
 rebuilt by changing an option.
+
+Disable sprints (2015-2020) is enabled by default. It overrides the game's per-track sprint flags
+to use standard weekends in those Progressive Career seasons.
+Historical sprint weekends (2021–2026) is a separate setting, also enabled by default. It enables
+sprints at that year's historical venues and uses standard weekends at its other circuits.
+Turn it off to restore the game's programmed sprint venues.
+Choose these settings before creating a season or entering a race weekend. Sessions already
+generated in a saved weekend are retained. Sprint sessions and points use the F1 25 rules.
+
+| Season | Historical sprint venues |
+|---|---|
+| 2021 | Silverstone, Monza, Interlagos |
+| 2022 | Imola, Red Bull Ring, Interlagos |
+| 2023 | Baku, Red Bull Ring, Spa, Lusail, Austin, Interlagos |
+| 2024 | Shanghai, Miami, Red Bull Ring, Austin, Interlagos, Lusail |
+| 2025 | Shanghai, Miami, Spa, Austin, Interlagos, Lusail |
+| 2026 | Shanghai, Miami, Montreal, Silverstone, Zandvoort, Singapore |
 
 | Grand Prix | Default circuit | Optional circuits and addon IDs |
 |---|---|---|
@@ -35,6 +52,9 @@ Obtain each track separately from its publisher. This package contains the calen
 
 ## Changelog
 
+- 1.4.0 Adds two enabled-by-default sprint settings. One disables sprint weekends in
+  Progressive Career seasons 2015-2020. The other sets historical sprint venues for 2021-2026,
+  with the game's programmed venues restored when it is turned off.
 - 1.3.1 Updates Progressive Career to the revised 23-round 2026 calendar. Removes Jeddah and moves the
   Bahrain or Sepang choice to round 16, after Baku and before Singapore.
 - 1.3.0 Replaces track toggles with Grand Prix circuit selectors. Uses Madrid for France, Miami for Russia

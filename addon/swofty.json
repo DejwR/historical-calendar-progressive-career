@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "dejw.swofty-historical-calendars-public",
-  "version": "1.3.1",
+  "version": "1.4.0",
   "name": "Historical Calendar for Progressive Career",
   "author": "Dejw",
   "category": "seasons",
@@ -47,6 +47,22 @@
     }
   ],
   "options": [
+    {
+      "id": "disable_historical_sprints",
+      "type": "toggle",
+      "label": "Disable sprints (2015\u20132020)",
+      "default": true,
+      "binds": "native",
+      "description": "Use standard weekends in Progressive Career seasons before 2021. Choose this before generating a season or starting a new weekend."
+    },
+    {
+      "id": "historical_sprint_weekends",
+      "type": "toggle",
+      "label": "Historical sprint weekends (2021\u20132026)",
+      "default": true,
+      "binds": "native",
+      "description": "Use each season's historical sprint venues in Progressive Career. Turn off to use the sprint venues programmed in the game. Choose this before generating a season or starting a new weekend."
+    },
     {
       "id": "tuscany_2020",
       "type": "choice",

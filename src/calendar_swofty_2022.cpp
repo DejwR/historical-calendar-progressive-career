@@ -10,6 +10,9 @@
 #include <swofty/systems/ui.hpp>
 
 #include "calendar_preset.hpp"
+#ifdef DEJW_PUBLIC_RELEASE
+#include "historical_sprints.hpp"
+#endif
 
 namespace {
 using namespace historical_calendar;
@@ -39,6 +42,33 @@ struct CareerSeason {
 };
 std::mutex transition_mutex;
 CareerSeason previous;
+#ifdef DEJW_PUBLIC_RELEASE
+SWOFTY_SETTING(bool, disable_historical_sprints, true);
+SWOFTY_SETTING(bool, historical_sprint_weekends, true);
+std::mutex sprint_mutex;
+bool disable_early_sprints = true;
+bool use_historical_sprints = true;
+bool sprint_layout_supported = false;
+int current_calendar_year = 0;
+void *current_track_data = nullptr;
+HistoricalSprints historical_sprints;
+
+void set_sprint_year(void *entity, int year)
+{
+    const std::lock_guard lock(sprint_mutex);
+    historical_sprints.restore();
+    game::TrackDataSystem *track_data = nullptr;
+    if (entity)
+        mem::read(reinterpret_cast<uintptr_t>(entity) + offsetof(game::CareerEntity, track_data), track_data);
+    current_track_data = track_data;
+    current_calendar_year = entity ? year : 0;
+    if (entity)
+        swofty::log("[swofty-historical-calendar] Sprint override %d: %s", year,
+                    !sprint_layout_supported ? "unsupported layout" :
+                    HistoricalSprints::applies(disable_early_sprints, year) ? "standard weekends" :
+                    use_historical_sprints && year >= 2021 && year <= 2026 ? "historical venues" : "game rules");
+}
+#endif
 
 #include "calendar_swofty_2022_data.hpp"
 #ifdef DEJW_PUBLIC_RELEASE
@@ -345,6 +375,47 @@ void log_saved_calendar(void *entity, uint32_t index, int year, const Calendar &
 }
 }
 
+#ifdef DEJW_PUBLIC_RELEASE
+SWOFTY_ON_CHANGE(disable_historical_sprints, bool enabled)
+{
+    const std::lock_guard lock(sprint_mutex);
+    disable_early_sprints = enabled;
+    historical_sprints.restore();
+}
+
+SWOFTY_ON_CHANGE(historical_sprint_weekends, bool enabled)
+{
+    const std::lock_guard lock(sprint_mutex);
+    use_historical_sprints = enabled;
+    historical_sprints.restore();
+}
+
+SWOFTY_WRAP(Game_TrackData_GetTrack, void *, void *system, const void *track_ref, const uint8_t *query)
+{
+    const auto track = orig(system, track_ref, query);
+    const std::lock_guard lock(sprint_mutex);
+    if (!sprint_layout_supported || !system || system != current_track_data)
+        return track;
+
+    bool sprint = false;
+    if (!HistoricalSprints::applies(disable_early_sprints, current_calendar_year)) {
+        if (!use_historical_sprints || current_calendar_year < 2021 || current_calendar_year > 2026)
+            return track;
+        const char *name = nullptr;
+        std::string code;
+        if (!track_ref ||
+            !mem::read(reinterpret_cast<uintptr_t>(track_ref) + offsetof(game::TrackDataRecord, name), name) ||
+            !mem::c_string(reinterpret_cast<uintptr_t>(name), code, 64))
+            return track;
+        sprint = HistoricalSprints::has_sprint(current_calendar_year, code);
+    }
+    if (historical_sprints.set_format(track, sprint))
+        swofty::log("[swofty-historical-calendar] Weekend format %d: track sprint = %d",
+                    current_calendar_year, static_cast<int>(sprint));
+    return track;
+}
+#endif
+
 SWOFTY_WRAP(Game_SeasonLength_ApplyPreset, void, void *component, uint8_t preset)
 {
     if (!component || preset > 2) {
@@ -357,6 +428,11 @@ SWOFTY_WRAP(Game_SeasonLength_ApplyPreset, void, void *component, uint8_t preset
         orig(component, preset);
         return;
     }
+#ifdef DEJW_PUBLIC_RELEASE
+    void *calendar_entity = nullptr;
+    mem::read(reinterpret_cast<uintptr_t>(component) + entity_offset, calendar_entity);
+    set_sprint_year(calendar_entity, year);
+#endif
 
     const auto &calendar = calendars[year - first_year];
 #ifdef DEJW_PUBLIC_RELEASE
@@ -420,11 +496,26 @@ SWOFTY_WRAP(Game_SeasonLength_ApplyPreset, void, void *component, uint8_t preset
 
 SWOFTY_ON_LOAD
 {
+#ifdef DEJW_PUBLIC_RELEASE
+    const auto executable = reinterpret_cast<uintptr_t>(GetModuleHandleW(nullptr));
+    constexpr uint8_t format_write[] = {0x88, 0x87, 0xfd, 0, 0, 0};
+    constexpr uint8_t format_read[] = {0x0f, 0xb6, 0xa8, 0xfd, 0, 0, 0};
+    sprint_layout_supported =
+        mem::readable(executable + 0x2e47a6c, sizeof(format_write)) &&
+        mem::readable(executable + 0xad65eb, sizeof(format_read)) &&
+        std::memcmp(reinterpret_cast<void *>(executable + 0x2e47a6c), format_write, sizeof(format_write)) == 0 &&
+        std::memcmp(reinterpret_cast<void *>(executable + 0xad65eb), format_read, sizeof(format_read)) == 0;
+    swofty::log("[swofty-historical-calendar] Historical sprint layout: %s",
+                sprint_layout_supported ? "verified" : "unavailable; override disabled");
+#endif
     using namespace swofty::career::events;
     swofty::events::on<SeasonStart>().after([](const SeasonStart &event, const swofty::events::Context &ctx) {
         season_started = true;
         const auto &career = ctx.career();
         const auto entity = career && career->data_group == progressive_group ? swofty::career::entity() : nullptr;
+#ifdef DEJW_PUBLIC_RELEASE
+        set_sprint_year(entity, event.year);
+#endif
         {
             const std::lock_guard lock(transition_mutex);
             rollover_calendar.restore();
@@ -435,6 +526,9 @@ SWOFTY_ON_LOAD
                                calendars[event.year - first_year]);
     });
     swofty::events::on<Unloaded>().after([](const Unloaded &, const swofty::events::Context &) {
+#ifdef DEJW_PUBLIC_RELEASE
+        set_sprint_year(nullptr, 0);
+#endif
         const std::lock_guard lock(transition_mutex);
         rollover_calendar.restore();
         previous = {};
