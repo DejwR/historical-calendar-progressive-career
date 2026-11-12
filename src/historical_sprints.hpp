@@ -4,6 +4,7 @@
 #include <array>
 #include <cstdint>
 #include <string_view>
+#include <unordered_map>
 #include <vector>
 
 #include <windows.h>
@@ -22,6 +23,7 @@ class HistoricalSprints {
         uint8_t written;
     };
     std::vector<ChangedTrack> changed_;
+    std::unordered_map<uintptr_t, uintptr_t> checked_;
 
     static bool writable_byte(uintptr_t address)
     {
@@ -32,6 +34,17 @@ class HistoricalSprints {
     }
 
 public:
+    bool already_checked(const void *track, const void *record) const
+    {
+        const auto entry = checked_.find(reinterpret_cast<uintptr_t>(track));
+        return entry != checked_.end() && entry->second == reinterpret_cast<uintptr_t>(record);
+    }
+
+    void new_session()
+    {
+        checked_.clear();
+    }
+
     static constexpr bool applies(bool enabled, int year)
     {
         return enabled && year >= 2015 && year <= 2020;
@@ -53,17 +66,20 @@ public:
         return std::ranges::find(season, track) != season.end();
     }
 
-    bool set_format(void *track, bool sprint)
+    bool set_format(void *track, bool sprint, const void *reference = nullptr)
     {
         const auto address = reinterpret_cast<uintptr_t>(track);
         const auto desired = static_cast<uint8_t>(sprint);
         uintptr_t record{};
         uint8_t format{};
-        // Query the pages directly before reading. The SDK's cached readability
-        // result can still describe memory freed during a career transition.
+        // The getter calls this only once for each track object in a session.
+        // Remember ordinary weekends too, since those make up most lookups.
         if (!address || !writable_byte(address) || !writable_byte(address + format_offset) ||
             !swofty::mem::read(address, record) ||
-            !swofty::mem::read(address + format_offset, format) || format > 1 || format == desired)
+            !swofty::mem::read(address + format_offset, format) || format > 1)
+            return false;
+        checked_[address] = reference ? reinterpret_cast<uintptr_t>(reference) : record;
+        if (format == desired)
             return false;
         const auto existing = std::ranges::find_if(changed_, [address](const ChangedTrack &entry) {
             return entry.address == address;
@@ -91,6 +107,7 @@ public:
                 *reinterpret_cast<uint8_t *>(entry.address + format_offset) = entry.original;
         }
         changed_.clear();
+        checked_.clear();
     }
 };
 

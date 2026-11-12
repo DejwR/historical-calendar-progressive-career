@@ -1,4 +1,4 @@
-# Historical Calendar for Progressive Career 1.4.0
+# Historical Calendar for Progressive Career 1.4.2
 
 By Dejw. Requires Swofty's Progressive Career. Update it to 0.4.0 or later for the 2015 start.
 Choose a starting year in Progressive Career and use Full Season.
@@ -52,6 +52,12 @@ Obtain each track separately from its publisher. This package contains the calen
 
 ## Changelog
 
+- 1.4.2 Caches sprint checks per track object and session to avoid repeated VirtualQuery calls in
+  Game_TrackData_GetTrack. Uses SDK region caching for cold reads and names tracks in sprint logs.
+  Includes the 2016 calendar creation fix from 1.4.1.
+- 1.4.1 Keeps the 2016 Full Season preset and its deferred calendar readers on the same 21-round
+  event list until the new season has been created. Addresses the reported 45-round 2016 calendar.
+  Test with a new 2016 career. Existing saved 45-round calendars require separate repair.
 - 1.4.0 Adds two enabled-by-default sprint settings. One disables sprint weekends in
   Progressive Career seasons 2015-2020. The other sets historical sprint venues for 2021-2026,
   with the game's programmed venues restored when it is turned off.

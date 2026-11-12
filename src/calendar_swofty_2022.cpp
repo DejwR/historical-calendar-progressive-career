@@ -119,7 +119,7 @@ bool writable(uintptr_t address, size_t size)
     return end > address && size <= end - address;
 }
 
-uintptr_t historical_preset_row(uintptr_t component)
+uintptr_t calendar_preset_row(uintptr_t component, const char *list, uint8_t type)
 {
     uintptr_t config{};
     PresetTable table{};
@@ -130,8 +130,8 @@ uintptr_t historical_preset_row(uintptr_t component)
     for (auto address = table.begin; address < table.end; address += sizeof(Preset)) {
         Preset row{};
         std::string name;
-        if (mem::read(address, row) && row.type == historical_preset && row.list_name &&
-            mem::c_string(reinterpret_cast<uintptr_t>(row.list_name), name, 64) && name == rollover_list)
+        if (mem::read(address, row) && row.type == type && row.list_name &&
+            mem::c_string(reinterpret_cast<uintptr_t>(row.list_name), name, 64) && name == list)
             return address;
     }
     return 0;
@@ -141,15 +141,19 @@ struct RolloverCalendar {
     uintptr_t available = 0, source = 0, preset = 0;
     ListVector original{}, replacement{};
     const char *preset_list_name = nullptr;
-    uint32_t count = 0;
+    uint32_t count = 0, original_count = 0;
+    uint8_t preset_type = 0;
 
-    bool prepare(uintptr_t component, int year, const Calendar &calendar)
+    bool prepare(uintptr_t component, int year, const Calendar &calendar,
+                 const char *available_list = rollover_list,
+                 std::span<const uint8_t> baseline = ids_2023,
+                 uint8_t type = historical_preset)
     {
         if (!supported_preset_layout())
             return false;
-        const auto available_row = named_list_row(component, rollover_list);
+        const auto available_row = named_list_row(component, available_list);
         const auto source_row = named_list_row(component, calendar.list);
-        const auto preset_row = historical_preset_row(component);
+        const auto preset_row = calendar_preset_row(component, available_list, type);
         if (!available_row || !source_row || available_row == source_row || !preset_row)
             return false;
         const auto available_vector = available_row + sizeof(uintptr_t);
@@ -164,9 +168,9 @@ struct RolloverCalendar {
                 current == replacement && other == original && current_preset.max_tracks == count &&
                 calendar_matches(current[1], current[2], calendar.events);
 
-        if (!calendar_matches(current[1], current[2], ids_2023) ||
+        if (!calendar_matches(current[1], current[2], baseline) ||
             !calendar_matches(other[1], other[2], calendar.events) ||
-            current[1] == other[1] || current_preset.max_tracks != ids_2023.size() ||
+            current[1] == other[1] || current_preset.max_tracks != baseline.size() ||
             !writable(available_vector, sizeof(current)) || !writable(source_vector, sizeof(other)) ||
             !writable(preset_row, sizeof(uint32_t)))
             return false;
@@ -177,6 +181,8 @@ struct RolloverCalendar {
         original = current;
         replacement = other;
         preset_list_name = current_preset.list_name;
+        preset_type = type;
+        original_count = current_preset.max_tracks;
         count = static_cast<uint32_t>(calendar.events.size());
         std::memcpy(reinterpret_cast<void *>(available), &replacement, sizeof(replacement));
         std::memcpy(reinterpret_cast<void *>(source), &original, sizeof(original));
@@ -191,19 +197,23 @@ struct RolloverCalendar {
         if (!available)
             return;
         ListVector current{}, other{};
-        if (mem::read(available, current) && mem::read(source, other) &&
-            current == replacement && other == original && writable(available, sizeof(current)) && writable(source, sizeof(other))) {
+        if (writable(available, sizeof(current)) && writable(source, sizeof(other)) &&
+            mem::read(available, current) && mem::read(source, other) &&
+            current == replacement && other == original) {
             std::memcpy(reinterpret_cast<void *>(available), &original, sizeof(original));
             std::memcpy(reinterpret_cast<void *>(source), &replacement, sizeof(replacement));
         }
         Preset row{};
-        if (mem::read(preset, row) && row.type == historical_preset && row.list_name == preset_list_name &&
-            row.max_tracks == count && writable(preset, sizeof(uint32_t)))
-            *reinterpret_cast<uint32_t *>(preset) = static_cast<uint32_t>(ids_2023.size());
+        if (writable(preset, sizeof(row)) && mem::read(preset, row) &&
+            row.type == preset_type && row.list_name == preset_list_name && row.max_tracks == count)
+            *reinterpret_cast<uint32_t *>(preset) = original_count;
         *this = {};
     }
 };
 RolloverCalendar rollover_calendar;
+#ifdef DEJW_PUBLIC_RELEASE
+RolloverCalendar starting_calendar_2016;
+#endif
 
 #ifndef DEJW_PUBLIC_RELEASE
 bool finale_enabled(int year)
@@ -397,21 +407,25 @@ SWOFTY_WRAP(Game_TrackData_GetTrack, void *, void *system, const void *track_ref
     if (!sprint_layout_supported || !system || system != current_track_data)
         return track;
 
-    bool sprint = false;
-    if (!HistoricalSprints::applies(disable_early_sprints, current_calendar_year)) {
-        if (!use_historical_sprints || current_calendar_year < 2021 || current_calendar_year > 2026)
-            return track;
-        const char *name = nullptr;
-        std::string code;
-        if (!track_ref ||
-            !mem::read(reinterpret_cast<uintptr_t>(track_ref) + offsetof(game::TrackDataRecord, name), name) ||
-            !mem::c_string(reinterpret_cast<uintptr_t>(name), code, 64))
-            return track;
-        sprint = HistoricalSprints::has_sprint(current_calendar_year, code);
-    }
-    if (historical_sprints.set_format(track, sprint))
-        swofty::log("[swofty-historical-calendar] Weekend format %d: track sprint = %d",
-                    current_calendar_year, static_cast<int>(sprint));
+    const bool standard = HistoricalSprints::applies(disable_early_sprints, current_calendar_year);
+    if (!standard && (!use_historical_sprints || current_calendar_year < 2021 || current_calendar_year > 2026))
+        return track;
+    if (historical_sprints.already_checked(track, track_ref))
+        return track;
+
+    // The common path above performs no memory queries or track-name reads.
+    // Cold reads share the SDK's region cache across the game's large heaps.
+    const mem::Trust trust(1000);
+    const char *name = nullptr;
+    std::string code;
+    if (!track_ref ||
+        !mem::read(reinterpret_cast<uintptr_t>(track_ref) + offsetof(game::TrackDataRecord, name), name) ||
+        !mem::c_string(reinterpret_cast<uintptr_t>(name), code, 64))
+        return track;
+    const bool sprint = !standard && HistoricalSprints::has_sprint(current_calendar_year, code);
+    if (historical_sprints.set_format(track, sprint, track_ref))
+        swofty::log("[swofty-historical-calendar] Weekend format %d: %s, sprint = %d",
+                    current_calendar_year, code.c_str(), static_cast<int>(sprint));
     return track;
 }
 #endif
@@ -424,6 +438,12 @@ SWOFTY_WRAP(Game_SeasonLength_ApplyPreset, void, void *component, uint8_t preset
     }
     const int rollover = rollover_year();
     const int year = rollover ? rollover : (preset == full_season_preset ? wizard_year() : 0);
+#ifdef DEJW_PUBLIC_RELEASE
+    if (rollover || year != 2016) {
+        const std::lock_guard lock(transition_mutex);
+        starting_calendar_2016.restore();
+    }
+#endif
     if (!year) {
         orig(component, preset);
         return;
@@ -443,6 +463,24 @@ SWOFTY_WRAP(Game_SeasonLength_ApplyPreset, void, void *component, uint8_t preset
 #endif
 
     const auto address = reinterpret_cast<uintptr_t>(component);
+#ifdef DEJW_PUBLIC_RELEASE
+    if (!rollover && year == 2016) {
+        bool ready;
+        {
+            const std::lock_guard lock(transition_mutex);
+            ready = starting_calendar_2016.prepare(address, year, calendar, stock_list, ids_2026,
+                                                   full_season_preset);
+        }
+        if (!ready) {
+            swofty::log("[swofty-historical-calendar] Could not synchronize the 2016 Full Season list; using the game calendar");
+            orig(component, preset);
+            return;
+        }
+        // Both the preset and deferred calendar readers must see the same event IDs.
+        // Keep the replacement until SeasonStart, including repeated wizard calls.
+        orig(component, full_season_preset);
+    } else
+#endif
     if (rollover && year != 2023) {
         bool ready;
         {
@@ -507,6 +545,10 @@ SWOFTY_ON_LOAD
         std::memcmp(reinterpret_cast<void *>(executable + 0xad65eb), format_read, sizeof(format_read)) == 0;
     swofty::log("[swofty-historical-calendar] Historical sprint layout: %s",
                 sprint_layout_supported ? "verified" : "unavailable; override disabled");
+    swofty::events::subscribe(SWOFTY_EVENT_SESSION_START, [](const SwoftyEvent *, void *) {
+        const std::lock_guard lock(sprint_mutex);
+        historical_sprints.new_session();
+    });
 #endif
     using namespace swofty::career::events;
     swofty::events::on<SeasonStart>().after([](const SeasonStart &event, const swofty::events::Context &ctx) {
@@ -519,6 +561,9 @@ SWOFTY_ON_LOAD
         {
             const std::lock_guard lock(transition_mutex);
             rollover_calendar.restore();
+#ifdef DEJW_PUBLIC_RELEASE
+            starting_calendar_2016.restore();
+#endif
             previous = {entity, event.year, event.season_index};
         }
         if (entity && event.year >= first_year && event.year <= last_year && event.season_index >= 0)
@@ -531,6 +576,9 @@ SWOFTY_ON_LOAD
 #endif
         const std::lock_guard lock(transition_mutex);
         rollover_calendar.restore();
+#ifdef DEJW_PUBLIC_RELEASE
+        starting_calendar_2016.restore();
+#endif
         previous = {};
         season_started = false;
     });
