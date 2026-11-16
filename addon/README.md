@@ -1,57 +1,72 @@
-# Historical Calendar for Progressive Career 1.4.2
+# Historical Calendar for Progressive Career 1.4.8
 
-By Dejw. Requires Swofty's Progressive Career. Update it to 0.4.0 or later for the 2015 start.
-Choose a starting year in Progressive Career and use Full Season.
-At the season transition, confirm the Historical Calendar preset if the game shows the calendar picker.
+Historical calendars for 2013-2026 in F1 25 using Swofty's Progressive Career.
 
-This package requires Swofty Launcher 1.8.36 or later on Windows, F1 25 build 25251167 and the F1 2026 game season.
-The public release supports the Steam copy. EA app is unsupported in this release.
-Each Grand Prix selector starts with a standard circuit. To use an optional circuit, select it and enable its
-track addon in the same launcher profile, then rebuild and restart from the launcher. If the track addon is
-missing or disabled, the build reports a warning and uses the default circuit. Choose the circuits before
-creating your career and keep them stable for that save. A calendar already saved in a career does not get
-rebuilt by changing an option.
+Requires Windows, Swofty Launcher 1.9.58 or later, Progressive Career and the F1 2026 game season.
+Steam: tested. EA app: compatibility pending confirmation. Launcher binding resolution is used, but the EA version has not been tested. The manifest therefore retains only the verified Steam platform badge.
 
-Disable sprints (2015-2020) is enabled by default. It overrides the game's per-track sprint flags
-to use standard weekends in those Progressive Career seasons.
-Historical sprint weekends (2021–2026) is a separate setting, also enabled by default. It enables
-sprints at that year's historical venues and uses standard weekends at its other circuits.
-Turn it off to restore the game's programmed sprint venues.
-Choose these settings before creating a season or entering a race weekend. Sessions already
-generated in a saved weekend are retained. Sprint sessions and points use the F1 25 rules.
+## Installation and use
 
-| Season | Historical sprint venues |
-|---|---|
-| 2021 | Silverstone, Monza, Interlagos |
-| 2022 | Imola, Red Bull Ring, Interlagos |
-| 2023 | Baku, Red Bull Ring, Spa, Lusail, Austin, Interlagos |
-| 2024 | Shanghai, Miami, Red Bull Ring, Austin, Interlagos, Lusail |
-| 2025 | Shanghai, Miami, Spa, Austin, Interlagos, Lusail |
-| 2026 | Shanghai, Miami, Montreal, Silverstone, Zandvoort, Singapore |
+Import the .swoftyaddon file directly into the launcher without extracting it. Enable it with Progressive Career. Choose your starting year and select Full Season.
+Optional circuit addons must be enabled in the same profile. Configure Grand Prix selectors before creating a career, then rebuild and restart through the launcher. Missing optional tracks use their configured substitutes. Existing saved calendars are not rebuilt by changing settings.
 
-| Grand Prix | Default circuit | Optional circuits and addon IDs |
-|---|---|---|
-| Tuscan Grand Prix (2020) | Suzuka | Jerez (`pajko.jerez`), Mugello (`mod.mugello`) |
-| France Grand Prix (2018, 2019, 2021, 2022) | Madrid | Paul Ricard (`twilight.paul-ricard`) |
-| Portugal Grand Prix (2020, 2021) | Melbourne | Portimão (`mod.portimao`) |
-| Russia Grand Prix (2015, 2016, 2017, 2018, 2019, 2020, 2021) | Miami | Sochi (`mod.sochi`) |
-| Germany Grand Prix (2016, 2018, 2019) | Zandvoort | Hockenheim (`mod.hockenheim`) |
-| Turkey Grand Prix (2020, 2021) | Singapore | Istanbul Park (`track.istanbul_park`) |
-| Sakhir Grand Prix (2020) | Jeddah | Bahrain Outer (`track.bahrain_outer`) |
-| Eifel Grand Prix (2020) | Zandvoort | Nürburgring (`mod.nurburgring`) |
-| Malaysia Grand Prix (2015, 2016, 2017) | Lusail | Sepang (`mod.bahrain24`) |
-| Bahrain Grand Prix (2026) | Bahrain | Sepang (`mod.bahrain24`) |
+## Current limitations
 
-Circuit choices keep the same round positions and season lengths.
-After updating from 1.2.1, reselect any optional circuits previously enabled with a toggle.
-Bahrain Grand Prix (2026) controls round 16 of the 23-round 2026 Progressive Career calendar.
-It is independent of the Malaysia Grand Prix selector for 2015–2017.
+Sprint overrides are currently unavailable while a maintained launcher API is needed. The two sprint controls have no effect; game sprint rules apply even in seasons that historically had no sprints.
+The 2013 calendar has 19 rounds but is untested in-game; Progressive Career must expose a 2013 start. India 2013 uses Lusail as a substitute. Optional Nurburgring and Korea selectors are included.
 
-Thanks to Swofty for Progressive Career and the launcher SDK, and to the creators of the optional tracks.
-Obtain each track separately from its publisher. This package contains the calendar changes and its two binaries.
+## Fast rollover test
+
+Retained by request and disabled by default. For a NEW Full Season career only, it reduces the starting season to its finale (Brazil for 2013, Abu Dhabi otherwise). Finish it to test rollover into a full historical calendar. Leave it OFF before creating a normal career. It does not shorten existing saved seasons.
+
+## Validation
+
+Steam in-game checks confirmed 2018 creation and 2018-to-2019 rollover, plus 2014 creation and 2014-to-2015 rollover. Other season starts and EA compatibility are not all verified. Release binaries match 1.4.8-beta.3.
 
 ## Changelog
 
+
+
+- Restored calendar compatibility after the F1 25 update. Calendar function addresses now come from launcher bindings instead of checks against fixed executable addresses.
+- Retained validation of calendar data and memory layouts before applying changes.
+- Added 19-round calendars for 2013 and 2014, including automatic progression into subsequent supported seasons.
+- Added the 2013 German Grand Prix circuit selector (Nurburgring or Zandvoort substitute) and Korean Grand Prix selector (Korea or Shanghai substitute).
+- Extended the Malaysia selector to 2013-2014 and the Russia and Germany selectors to 2014.
+- Included the optional Fast rollover test switch, disabled by default. On a new Full Season career it reduces the starting season to its finale; the next season uses its full calendar. Brazil is the 2013 finale; other supported seasons use Abu Dhabi.
+- Updated the minimum launcher requirement to 1.9.58 and removed the old exact game-build restriction.
+- Steam: tested. EA app: compatibility pending confirmation; no EA support claim is made until in-game testing is complete.
+
+Current limitations
+
+- Sprint overrides are unavailable pending a maintained launcher API. Both sprint settings currently have no effect; the game's sprint rules apply, including in pre-2021 seasons.
+- The 2013 calendar is included but has not been tested in-game. Starting in 2013 requires that year to be exposed by Progressive Career. India uses Lusail as a substitute.
+- Existing saved calendars are not rebuilt automatically. Choose optional circuits before creating a career.
+- Launcher bindings resolve function addresses, but the addon still validates local data layouts. Future game updates can require another compatibility update.
+
+Validation
+
+- In-game confirmation on Steam: 2018 calendar creation and 2018-to-2019 rollover; 2014 calendar creation and 2014-to-2015 rollover.
+- Release native binaries are byte-identical to the tested 1.4.8-beta.3 package; this release updates packaging and documentation.
+- These checks do not establish EA compatibility or validate every supported season in-game.
+
+## Earlier releases
+
+
+- 1.4.7 Synchronizes Full Season and deferred calendar reads for every starting
+  year from 2015 to 2026, extending the earlier 2016-only protection.
+  Restores the previous wizard list before changing year, career entity or preset,
+  preventing calendars from being combined after backing out and trying again.
+  Labels preset verification as provisional until the saved Team HQ calendar is checked.
+- 1.4.6 Fixes the whole native addon being rejected by the launcher in 1.4.5.
+  Uses the exported Career_ScheduleEntry_Finish binding for automatic rollover
+  instead of the non-exported Game_Season_CompleteSeason analysis symbol.
+  Restores calendar creation and sprint overrides, including the 21-round 2016 start.
+- 1.4.5 Prepares the next historical calendar when the final weekend is completed,
+  including automatic rollovers that skip the season-length selection screen.
+  Addresses the 2015-to-2016 rollover loading the 22-round base calendar instead of 21 rounds.
+  Keeps deferred schedule readers on the same list until the next season starts.
+  Caches failed sprint checks until the next session and uses SDK region caching
+  for sprint-apply reads, with guarded writes for stale or read-only objects.
 - 1.4.2 Caches sprint checks per track object and session to avoid repeated VirtualQuery calls in
   Game_TrackData_GetTrack. Uses SDK region caching for cold reads and names tracks in sprint logs.
   Includes the 2016 calendar creation fix from 1.4.1.

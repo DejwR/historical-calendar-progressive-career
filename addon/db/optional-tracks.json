@@ -311,6 +311,13 @@
         "field": "activity",
         "value": "dejw_career_hockenheim",
         "create": false
+      },
+      {
+        "op": "db.set",
+        "select": "schedule.all_track_events.fixed_event[_metadata_=dejw_calendar_2014_10]",
+        "field": "activity",
+        "value": "dejw_career_hockenheim",
+        "create": false
       }
     ]
   },
@@ -533,6 +540,13 @@
         "language": "*",
         "key": "lng_dejw_swofty_sepang_gp",
         "value": "Malaysian Grand Prix"
+      },
+      {
+        "op": "db.set",
+        "select": "schedule.all_track_events.fixed_event[_metadata_=dejw_calendar_2013_02]",
+        "field": "activity",
+        "value": "dejw_career_bahrain24",
+        "create": false
       }
     ]
   },
@@ -653,6 +667,60 @@
         "language": "*",
         "key": "lng_dejw_swofty_sepang_gp",
         "value": "Malaysian Grand Prix"
+      }
+    ]
+  },
+  {
+    "option": "germany_2013",
+    "value": "nurburgring",
+    "addon": "mod.nurburgring",
+    "name": "German Grand Prix (2013)",
+    "ops": [
+      {
+        "op": "db.add-row",
+        "table": "schedule.activities",
+        "from": "schedule.activities.activity_race_weekend[_metadata_=zandvoort]",
+        "set": {
+          "_metadata_": "dejw_career_nurburgring",
+          "track": "nurburgring",
+          "stat_id": "142"
+        },
+        "copy": "all",
+        "stat_id": "keep"
+      },
+      {
+        "op": "db.set",
+        "select": "schedule.all_track_events.fixed_event[_metadata_=dejw_calendar_2013_09]",
+        "field": "activity",
+        "value": "dejw_career_nurburgring",
+        "create": false
+      }
+    ]
+  },
+  {
+    "option": "korea_gp",
+    "value": "korea",
+    "addon": "pajko.korea",
+    "name": "Korean Grand Prix (2013)",
+    "ops": [
+      {
+        "op": "db.add-row",
+        "table": "schedule.activities",
+        "from": "schedule.activities.activity_race_weekend[_metadata_=shanghai]",
+        "set": {
+          "_metadata_": "dejw_career_korea",
+          "track": "korea",
+          "stat_id": "148"
+        },
+        "copy": "all",
+        "stat_id": "keep"
+      },
+      {
+        "op": "db.set",
+        "select": "schedule.all_track_events.fixed_event[_metadata_=dejw_calendar_2013_14]",
+        "field": "activity",
+        "value": "dejw_career_korea",
+        "create": false
       }
     ]
   }

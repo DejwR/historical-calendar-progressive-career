@@ -1,3 +1,13 @@
+constexpr char list_2013[] = "dejw_swofty_calendar_2013";
+constexpr std::array<uint8_t, 19> ids_2013{95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 109, 157, 158, 159, 244, 245, 246, 247, 248};
+constexpr std::array<uint8_t, 19> tracks_2013{0, 255, 2, 3, 4, 5, 6, 7, 255, 9, 10, 11, 12, 255, 13, 32, 14, 15, 16};
+constexpr std::array<const char *, 19> track_codes_2013{"", "bahrain24", "", "", "", "", "", "", "nurburgring", "", "", "", "", "korea", "", "", "", "", ""};
+constexpr std::array<const char *, 19> event_names_2013{"dejw_calendar_2013_01", "dejw_calendar_2013_02", "dejw_calendar_2013_03", "dejw_calendar_2013_04", "dejw_calendar_2013_05", "dejw_calendar_2013_06", "dejw_calendar_2013_07", "dejw_calendar_2013_08", "dejw_calendar_2013_09", "dejw_calendar_2013_10", "dejw_calendar_2013_11", "dejw_calendar_2013_12", "dejw_calendar_2013_13", "dejw_calendar_2013_14", "dejw_calendar_2013_15", "dejw_calendar_2013_16", "dejw_calendar_2013_17", "dejw_calendar_2013_18", "dejw_calendar_2013_19"};
+constexpr char list_2014[] = "dejw_swofty_calendar_2014";
+constexpr std::array<uint8_t, 19> ids_2014{137, 138, 249, 250, 141, 142, 143, 144, 145, 251, 146, 147, 148, 149, 150, 151, 152, 154, 155};
+constexpr std::array<uint8_t, 19> tracks_2014{0, 255, 3, 2, 4, 5, 6, 17, 7, 255, 9, 10, 11, 12, 13, 255, 15, 16, 14};
+constexpr std::array<const char *, 19> track_codes_2014{"", "bahrain24", "", "", "", "", "", "", "", "hockenheim", "", "", "", "", "", "sochi", "", "", ""};
+constexpr std::array<const char *, 19> event_names_2014{"dejw_calendar_2015_01", "dejw_calendar_2015_02", "dejw_calendar_2014_03", "dejw_calendar_2014_04", "dejw_calendar_2015_05", "dejw_calendar_2015_06", "dejw_calendar_2015_07", "dejw_calendar_2015_08", "dejw_calendar_2015_09", "dejw_calendar_2014_10", "dejw_calendar_2015_10", "dejw_calendar_2015_11", "dejw_calendar_2015_12", "dejw_calendar_2015_13", "dejw_calendar_2015_14", "dejw_calendar_2015_15", "dejw_calendar_2015_16", "dejw_calendar_2015_18", "dejw_calendar_2015_19"};
 constexpr char list_2016[] = "dejw_swofty_calendar_2016";
 constexpr std::array<uint8_t, 21> ids_2016{33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53};
 constexpr std::array<uint8_t, 21> tracks_2016{0, 3, 2, 255, 4, 5, 6, 20, 17, 7, 9, 255, 10, 11, 12, 255, 13, 15, 19, 16, 14};

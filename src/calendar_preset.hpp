@@ -80,57 +80,32 @@ constexpr std::array<uint8_t, 23> preset_body_signature{
     0x48, 0x83, 0xec, 0x48, 0x48, 0x8b, 0x81, 0x90, 0x02, 0x00, 0x00,
 };
 
-#ifdef DEJW_EA_TEST
+// Resolve before mixins are committed: after commit the entry is a trampoline.
+// The launcher owns discovery on every game build. No executable RVAs are used.
 bool preset_layout_verified = false;
 
-bool verify_test_preset_layout()
+bool verify_launcher_preset_layout()
 {
-    constexpr uintptr_t steam_entry_rva = 0xbc9fc0;
-    constexpr uintptr_t ea_entry_rva = 0xbc8930;
-    const auto base = swofty::api->module_base();
     const auto entry = swofty::api->resolve("Game_SeasonLength_ApplyPreset");
-    const auto rva = base && entry >= base ? entry - base : 0;
-    if (rva != steam_entry_rva && rva != ea_entry_rva) {
-        swofty::log("[swofty-historical-calendar] EA/Steam test: unsupported ApplyPreset entry RVA 0x%llx",
-                    static_cast<unsigned long long>(rva));
-        return false;
+    uintptr_t body = entry;
+    std::array<uint8_t, 5> head{};
+    if (!entry || !mem::read(entry, head))
+        return true; // Per-feature guards refuse writes; other features can load.
+    if (head[0] == 0xe9) {
+        int32_t displacement{};
+        std::memcpy(&displacement, head.data() + 1, sizeof(displacement));
+        body = static_cast<uintptr_t>(static_cast<int64_t>(entry + head.size()) + displacement);
     }
-
-    // Read the original jump before registering the mixin. The two storefronts
-    // put the body at different addresses, but it must use the same layout.
-    std::array<uint8_t, 5> jump{};
-    if (!mem::read(entry, jump) || jump[0] != 0xe9) {
-        swofty::log("[swofty-historical-calendar] EA/Steam test: could not read the original ApplyPreset jump");
-        return false;
-    }
-    int32_t displacement{};
-    std::memcpy(&displacement, jump.data() + 1, sizeof(displacement));
-    const auto body_rva = static_cast<int64_t>(rva + jump.size()) + displacement;
-    if (body_rva <= 0)
-        return false;
-    const auto body = base + static_cast<uintptr_t>(body_rva);
-    MEMORY_BASIC_INFORMATION region{};
     std::array<uint8_t, preset_body_signature.size()> actual{};
-    preset_layout_verified = VirtualQuery(reinterpret_cast<void *>(body), &region, sizeof(region)) == sizeof(region) &&
-        reinterpret_cast<uintptr_t>(region.AllocationBase) == base && mem::read(body, actual) &&
-        actual == preset_body_signature;
-    swofty::log("[swofty-historical-calendar] EA/Steam test: %s ApplyPreset entry RVA 0x%llx, body RVA 0x%llx, layout %s",
-                rva == ea_entry_rva ? "EA app" : "Steam", static_cast<unsigned long long>(rva),
-                static_cast<unsigned long long>(body_rva), preset_layout_verified ? "verified" : "rejected");
-    return preset_layout_verified;
+    preset_layout_verified = mem::read(body, actual) && actual == preset_body_signature;
+    swofty::log("[swofty-historical-calendar] Launcher binding Game_SeasonLength_ApplyPreset: %s; preset layout %s",
+                entry ? "resolved" : "unavailable", preset_layout_verified ? "verified" : "unsupported; calendar writes disabled");
+    return true;
 }
-#endif
 
 bool supported_preset_layout()
 {
-#ifdef DEJW_EA_TEST
     return preset_layout_verified;
-#else
-    const auto base = swofty::api->module_base();
-    std::array<uint8_t, preset_body_signature.size()> actual{};
-    return base && swofty::api->resolve("Game_SeasonLength_ApplyPreset") == base + 0xbc9fc0 &&
-        mem::read(base + 0x98ccd50, actual) && actual == preset_body_signature;
-#endif
 }
 
 class ScopedPreset {
